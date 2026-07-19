@@ -146,6 +146,14 @@ hr {
 	padding-top: 1em;
 	border-top: 1px dashed rgb(var(--gray-light));
 }
+.coupang-banner {
+	margin: 2em 0;
+	text-align: center;
+}
+.coupang-banner img {
+	max-width: 100%;
+	height: auto;
+}
 @media (max-width: 720px) {
 	body {
 		font-size: 18px;

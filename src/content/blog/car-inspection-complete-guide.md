@@ -82,6 +82,10 @@ faq:
 **Q. 검사 시기를 문자로 받으려면?**
 사이버검사소에서 알림 신청을 해두면 검사 시기를 미리 안내받을 수 있습니다.
 
+<div class="coupang-banner">
+  <a href="https://link.coupang.com/a/fwbiN16A3M" target="_blank" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/1008333?trackingCode=AF6461008&subId=&traceId=V0-301-c1744fa69c93f626-I1008333&w=728&h=90" alt="쿠팡 로켓 자동차용품"></a>
+</div>
+
 <p class="affiliate-disclosure">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
 
 > 검사 주기·수수료·과태료 기준은 법령 개정에 따라 변경될 수 있습니다. 최신 기준은 한국교통안전공단 사이버검사소(www.cyberts.kr) 공식 안내를 확인하세요.

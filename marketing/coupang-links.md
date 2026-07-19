@@ -13,3 +13,15 @@
 | 자동차 | 벤딕트 무선 타이어 공기압 주입기 나노 6000mAh | https://link.coupang.com/a/fwaJtbrw0O | 검사 전 셀프 공기압 점검·보충 |
 
 <!-- 새 링크 추가 형식: | 카테고리 | 상품명 | 링크 | 한 줄 추천 이유 | -->
+
+## 배너 (카테고리 관련 글 본문 하단, 고지 문구 위에 삽입)
+
+배너는 상품 박스와 달리 글 하단에 넣는다. 삽입 시 아래 HTML을 그대로 사용하고, 반드시 `.coupang-banner` div로 감싼다. 배너가 들어간 글에도 하단 고지 문구는 필수.
+
+### 자동차 (로켓 자동차용품, 728x90)
+
+```html
+<div class="coupang-banner">
+  <a href="https://link.coupang.com/a/fwbiN16A3M" target="_blank" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/1008333?trackingCode=AF6461008&subId=&traceId=V0-301-c1744fa69c93f626-I1008333&w=728&h=90" alt="쿠팡 로켓 자동차용품"></a>
+</div>
+```
