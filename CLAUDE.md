@@ -24,7 +24,7 @@
 
 ## 주간 점검 (주 1회, 발행 루틴에 추가로)
 
-- 배포된 사이트(https://living-note.vercel.app) 접속 확인
+- 배포된 사이트(https://living-note.kr) 접속 확인
 - 깨진 링크·오래된 정보가 있는 글 확인, 필요 시 `updatedDate` 추가하며 수정
 
 ## 명령어

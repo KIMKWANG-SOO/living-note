@@ -10,7 +10,7 @@ import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
 const ROOT = 'D:/living-note';
-const SITE = 'https://living-note.vercel.app';
+const SITE = 'https://living-note.kr';
 const API_VERSION = 'v23.0';
 
 // ---- .env 파싱 ----

@@ -89,7 +89,7 @@ foreach ($card in $spec.cards) {
     # 푸터 브랜드
     $footFmt = New-Object System.Drawing.StringFormat
     $footFmt.Alignment = [System.Drawing.StringAlignment]::Center
-    $g.DrawString('생활정보노트 | living-note.vercel.app', $footFont, $footBrush, (New-Object System.Drawing.RectangleF 40, 990, 1000, 60), $footFmt)
+    $g.DrawString('생활정보노트 | living-note.kr', $footFont, $footBrush, (New-Object System.Drawing.RectangleF 40, 990, 1000, 60), $footFmt)
     $footFmt.Dispose()
 
     $outPath = Join-Path $OutDir ('card-{0:d2}.png' -f $i)
