@@ -9,12 +9,25 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 const posts = (await getCollection('blog'))
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 	.slice(0, 10);
+
+const websiteLd = {
+	'@context': 'https://schema.org',
+	'@type': 'WebSite',
+	name: SITE_TITLE,
+	description: SITE_DESCRIPTION,
+	url: Astro.site?.href,
+	inLanguage: 'ko',
+};
 ---
 
 <!doctype html>
 <html lang="ko">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead
+			title={`${SITE_TITLE} — 보험 청구·민원서류·정부지원 생활정보 가이드`}
+			description={SITE_DESCRIPTION}
+		/>
+		<script type="application/ld+json" set:html={JSON.stringify(websiteLd)} />
 		<style>
 			.intro {
 				margin-bottom: 2.5em;

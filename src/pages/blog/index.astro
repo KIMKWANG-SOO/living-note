@@ -15,7 +15,10 @@ const posts = (await getCollection('blog')).sort(
 <!doctype html>
 <html lang="ko">
 	<head>
-		<BaseHead title={`전체 글 | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+		<BaseHead
+			title={`전체 글 | ${SITE_TITLE}`}
+			description="생활정보노트의 전체 글 목록입니다. 보험 청구, 민원 서류 발급, 자동차 관리 등 절차 중심 가이드를 최신순으로 확인하세요."
+		/>
 		<style>
 			main {
 				width: 960px;
@@ -89,6 +92,7 @@ const posts = (await getCollection('blog')).sort(
 	<body>
 		<Header />
 		<main>
+			<h1>전체 글</h1>
 			<section>
 				<ul>
 					{
