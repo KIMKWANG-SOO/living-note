@@ -33,6 +33,12 @@
 - 빌드 점검: `npm run build`
 - 미리보기: `npm run preview`
 
+## 배포 규칙 (회사 매뉴얼 준수)
+
+- **배포는 `git push origin main`으로만 한다.** Vercel CLI 등으로 직접 배포하지 말 것.
+- 배포·서버 구성(Vercel 프로젝트 설정 등)은 기존 방식 그대로 유지하고 임의로 바꾸지 말 것.
+- 작업 원칙: 정확성 > 검증 > 최소 변경. 수정 후 반드시 `npm run build`로 검증하고, 검증 없이 성공했다고 보고하지 않는다.
+
 ## 구조
 
 - 글: `src/content/blog/*.md` (frontmatter 스키마: `src/content.config.ts`)
