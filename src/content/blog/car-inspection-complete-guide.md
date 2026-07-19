@@ -65,6 +65,12 @@ faq:
 - 계기판 경고등(엔진 경고등 등) 점등 여부 — 경고등이 켜져 있으면 불합격 가능성이 높습니다
 - 불법 구조 변경(과도한 틴팅 필름, 등화 개조 등) 여부
 
+<div class="product-box">
+  <div class="product-label">🛒 함께 보면 좋은 준비물</div>
+  <a href="https://link.coupang.com/a/fwaJtbrw0O" target="_blank" rel="nofollow sponsored noopener">벤딕트 무선 타이어 공기압 주입기 나노 6000mAh</a>
+  <p class="product-note">정비소에 가지 않고 집에서 공기압을 점검·보충할 수 있어, 검사 전 셀프 점검에 유용합니다.</p>
+</div>
+
 ## 자주 묻는 질문
 
 **Q. 검사 예약 없이 그냥 가도 되나요?**
@@ -75,5 +81,7 @@ faq:
 
 **Q. 검사 시기를 문자로 받으려면?**
 사이버검사소에서 알림 신청을 해두면 검사 시기를 미리 안내받을 수 있습니다.
+
+<p class="affiliate-disclosure">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
 
 > 검사 주기·수수료·과태료 기준은 법령 개정에 따라 변경될 수 있습니다. 최신 기준은 한국교통안전공단 사이버검사소(www.cyberts.kr) 공식 안내를 확인하세요.
