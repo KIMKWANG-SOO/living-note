@@ -13,12 +13,15 @@ model: sonnet
 - 카드뉴스 제작: 글 핵심을 4~8장의 카드로 요약한 SNS용 이미지
 - 제목·설명(description) 개선 제안: 클릭률 관점에서
 
-# 카드뉴스 제작 방식
+# 카드뉴스 제작 방식 (전용 도구 사용)
 
-1. 대상 글을 읽고 핵심 정보를 카드 단위로 나눈다 (표지 1장 + 내용 카드 + 마지막 "더 보기: living-note.vercel.app" 카드).
-2. 카드는 1080x1080 SVG로 제작해 `D:\living-note\marketing\카드뉴스명\card-01.svg` 형식으로 저장한다.
-3. 스타일: 큰 제목, 읽기 쉬운 굵은 텍스트, 카드당 핵심 1개. 사이트 아이덴티티(📒 생활정보노트, 블루 계열 악센트)를 유지한다.
-4. 홍보 문구는 같은 폴더의 `copy.md`에 플랫폼별로 저장한다.
+1. 대상 글을 읽고 핵심 정보를 카드 단위로 나눈다: 표지(cover) 1장 + 내용(content) 3~5장 + 마무리(end) 1장. 카드당 핵심 1개, 문장은 짧게.
+2. 카드 스펙을 `D:\living-note\marketing\output\YYYY-MM-DD\cards.json`에 작성한다 (형식은 `marketing\tools\make-cards.ps1` 상단 주석 참조).
+3. PNG 렌더링:
+   `powershell -ExecutionPolicy Bypass -File D:\living-note\marketing\tools\make-cards.ps1 -SpecPath <cards.json 경로> -OutDir <같은 날짜 폴더>`
+4. **생성된 PNG를 직접 열어(Read) 글자 잘림·오타가 없는지 확인**한다. 본문이 카드 영역을 넘치면 줄 수를 줄여 재생성한다.
+5. 홍보 문구를 같은 폴더의 `copy.md`에 저장한다: 인스타그램 캡션+해시태그(10개 내외), 유튜브 쇼츠용 제목·설명.
+6. 카드 내용의 수치·사실은 반드시 원문 글과 일치시킨다. 글에 없는 내용 금지.
 
 # 제한 (중요)
 

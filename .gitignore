@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# 카드뉴스 산출물 (이미지 대용량, git 제외)
+marketing/output/
