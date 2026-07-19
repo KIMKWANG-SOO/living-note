@@ -115,6 +115,37 @@ hr {
 	border: none;
 	border-top: 1px solid rgb(var(--gray-light));
 }
+/* 쿠팡 파트너스 상품 추천 박스 */
+.product-box {
+	margin: 2em 0;
+	padding: 1.2em 1.5em;
+	border: 1px solid rgb(var(--gray-light));
+	border-left: 4px solid var(--accent);
+	border-radius: 8px;
+	background: rgba(var(--gray-light), 25%);
+}
+.product-box .product-label {
+	font-size: 0.8em;
+	font-weight: 700;
+	color: var(--accent);
+	margin-bottom: 0.4em;
+}
+.product-box a {
+	font-weight: 700;
+	font-size: 1.05em;
+}
+.product-box .product-note {
+	font-size: 0.85em;
+	color: rgb(var(--gray));
+	margin: 0.5em 0 0 0;
+}
+.affiliate-disclosure {
+	font-size: 0.8em;
+	color: rgb(var(--gray));
+	margin-top: 2.5em;
+	padding-top: 1em;
+	border-top: 1px dashed rgb(var(--gray-light));
+}
 @media (max-width: 720px) {
 	body {
 		font-size: 18px;
