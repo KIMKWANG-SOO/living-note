@@ -1,0 +1,92 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+const posts = (await getCollection('blog'))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+	.slice(0, 10);
+---
+
+<!doctype html>
+<html lang="ko">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			.intro {
+				margin-bottom: 2.5em;
+			}
+			.intro h1 {
+				font-size: 2em;
+			}
+			.intro p {
+				color: rgb(var(--gray));
+			}
+			.post-list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			.post-list li {
+				padding: 1em 0;
+				border-bottom: 1px solid rgb(var(--gray-light));
+			}
+			.post-list a {
+				text-decoration: none;
+				display: block;
+			}
+			.post-list .title {
+				margin: 0 0 0.3em 0;
+				font-size: 1.25em;
+				color: rgb(var(--black));
+			}
+			.post-list a:hover .title {
+				color: var(--accent);
+			}
+			.post-list .desc {
+				margin: 0 0 0.3em 0;
+				color: rgb(var(--gray-dark));
+				font-size: 0.9em;
+			}
+			.post-list .date {
+				margin: 0;
+				color: rgb(var(--gray));
+				font-size: 0.85em;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="intro">
+				<h1>일상에 필요한 정보를, 한 번에 정리해 드립니다</h1>
+				<p>
+					보험 청구, 민원 서류 발급, 정부 지원 제도, 자동차 관리 — 검색해도 흩어져 있는 생활
+					정보를 절차 중심으로 알기 쉽게 정리하는 블로그입니다.
+				</p>
+			</section>
+			<section>
+				<h2>최신 글</h2>
+				<ul class="post-list">
+					{
+						posts.map((post) => (
+							<li>
+								<a href={`/blog/${post.id}/`}>
+									<h3 class="title">{post.data.title}</h3>
+									<p class="desc">{post.data.description}</p>
+									<p class="date">
+										<FormattedDate date={post.data.pubDate} />
+									</p>
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
