@@ -87,6 +87,21 @@ input {
 }
 table {
 	width: 100%;
+	border-collapse: collapse;
+	margin: 1.5em 0;
+}
+th,
+td {
+	padding: 0.6em 0.8em;
+	border: 1px solid rgb(var(--gray-light));
+	text-align: left;
+}
+th {
+	background: rgba(var(--gray-light), 50%);
+	font-weight: 700;
+}
+tr:nth-child(even) td {
+	background: rgba(var(--gray-light), 20%);
 }
 img {
 	max-width: 100%;
@@ -160,6 +175,15 @@ hr {
 	}
 	main {
 		padding: 1em;
+	}
+	table {
+		display: block;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+	th,
+	td {
+		white-space: nowrap;
 	}
 }
 
