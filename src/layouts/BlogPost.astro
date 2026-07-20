@@ -13,7 +13,7 @@ type Props = CollectionEntry<'blog'>['data'] & {
 	isArticle?: boolean;
 };
 
-const { title, description, pubDate, updatedDate, heroImage, faq, postId, isArticle = true } =
+const { title, description, pubDate, updatedDate, heroImage, faq, tags, postId, isArticle = true } =
 	Astro.props;
 
 const pageURL = new URL(Astro.url.pathname, Astro.site).href;
@@ -94,32 +94,55 @@ const related = postId
 				box-shadow: var(--box-shadow);
 			}
 			.prose {
-				width: 720px;
+				width: 760px;
 				max-width: calc(100% - 2em);
 				margin: auto;
-				padding: 1em;
+				padding: 2.2em 2.5em;
 				color: rgb(var(--gray-dark));
+				background: var(--card-bg);
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: var(--radius);
+				box-shadow: var(--box-shadow);
 			}
 			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
+				margin-bottom: 1.5em;
+				padding-bottom: 1.5em;
 				text-align: center;
-				line-height: 1;
+				line-height: 1.3;
+				border-bottom: 1px solid rgb(var(--gray-light));
 			}
 			.title h1 {
-				margin: 0 0 0.5em 0;
+				margin: 0.4em 0 0.5em;
+				font-size: 1.75em;
+			}
+			.meta-row {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 0.8em;
 			}
 			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
-			}
-			.author {
-				margin-bottom: 0.5em;
 				color: rgb(var(--gray));
 				font-size: 0.85em;
 			}
+			.author {
+				margin: 0;
+				color: rgb(var(--gray));
+				font-size: 0.82em;
+			}
 			.last-updated-on {
 				font-style: italic;
+				font-size: 0.85em;
+				color: rgb(var(--gray));
+				margin-top: 0.3em;
+			}
+			@media (max-width: 720px) {
+				.prose {
+					padding: 1.5em 1.2em;
+				}
+				.title h1 {
+					font-size: 1.4em;
+				}
 			}
 			.related {
 				margin-top: 3em;
@@ -150,19 +173,21 @@ const related = postId
 				</div>
 				<div class="prose">
 					<div class="title">
-						<div class="date">
-							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										최종 수정: <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
+						<div class="meta-row">
+							{isArticle && tags?.[0] && <span class="tag-chip">{tags[0]}</span>}
+							<span class="date">
+								<FormattedDate date={pubDate} />
+							</span>
 						</div>
 						<h1>{title}</h1>
 						{isArticle && <p class="author">생활정보노트 편집팀</p>}
-						<hr />
+						{
+							updatedDate && (
+								<div class="last-updated-on">
+									최종 수정: <FormattedDate date={updatedDate} />
+								</div>
+							)
+						}
 					</div>
 					<slot />
 					{

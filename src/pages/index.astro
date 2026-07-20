@@ -18,6 +18,8 @@ const websiteLd = {
 	url: Astro.site?.href,
 	inLanguage: 'ko',
 };
+
+const categories = ['보험', '민원서류', '정부지원금', '자동차', '부동산', '세금·연말정산', '여행', '생활꿀팁'];
 ---
 
 <!doctype html>
@@ -29,70 +31,146 @@ const websiteLd = {
 		/>
 		<script type="application/ld+json" set:html={JSON.stringify(websiteLd)} />
 		<style>
-			.intro {
+			.hero {
+				background: var(--accent-gradient);
+				border-radius: var(--radius);
+				padding: 2.8em 2.2em;
 				margin-bottom: 2.5em;
+				color: #ffffff;
+				box-shadow: var(--box-shadow);
 			}
-			.intro h1 {
-				font-size: 2em;
+			.hero h1 {
+				color: #ffffff;
+				font-size: 1.9em;
+				margin-bottom: 0.5em;
 			}
-			.intro p {
-				color: rgb(var(--gray));
+			.hero p {
+				color: rgba(255, 255, 255, 0.88);
+				font-size: 0.95em;
+				max-width: 34em;
+				margin-bottom: 1.4em;
+			}
+			.hero .chips {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5em;
+			}
+			.hero .chip {
+				padding: 0.25em 0.9em;
+				border-radius: 999px;
+				background: rgba(255, 255, 255, 0.16);
+				border: 1px solid rgba(255, 255, 255, 0.25);
+				color: #ffffff;
+				font-size: 0.78em;
+				font-weight: 600;
+			}
+			.section-title {
+				display: flex;
+				align-items: baseline;
+				justify-content: space-between;
+				margin-bottom: 1em;
+			}
+			.section-title h2 {
+				font-size: 1.3em;
+				margin: 0;
+			}
+			.section-title a {
+				font-size: 0.85em;
+				font-weight: 600;
 			}
 			.post-list {
 				list-style: none;
 				margin: 0;
 				padding: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 1em;
 			}
-			.post-list li {
-				padding: 1em 0;
-				border-bottom: 1px solid rgb(var(--gray-light));
+			.post-card {
+				background: var(--card-bg);
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: var(--radius);
+				transition:
+					box-shadow 0.2s ease,
+					transform 0.2s ease,
+					border-color 0.2s ease;
 			}
-			.post-list a {
-				text-decoration: none;
+			.post-card:hover {
+				box-shadow: var(--box-shadow-hover);
+				transform: translateY(-2px);
+				border-color: var(--accent);
+			}
+			.post-card a {
 				display: block;
+				padding: 1.3em 1.5em;
+				text-decoration: none;
 			}
-			.post-list .title {
-				margin: 0 0 0.3em 0;
-				font-size: 1.25em;
+			.post-card .meta {
+				display: flex;
+				align-items: center;
+				gap: 0.8em;
+				margin-bottom: 0.5em;
+			}
+			.post-card .date {
+				color: rgb(var(--gray));
+				font-size: 0.8em;
+			}
+			.post-card .title {
+				margin: 0 0 0.4em 0;
+				font-size: 1.15em;
 				color: rgb(var(--black));
+				line-height: 1.4;
 			}
-			.post-list a:hover .title {
+			.post-card a:hover .title {
 				color: var(--accent);
 			}
-			.post-list .desc {
-				margin: 0 0 0.3em 0;
-				color: rgb(var(--gray-dark));
-				font-size: 0.9em;
-			}
-			.post-list .date {
+			.post-card .desc {
 				margin: 0;
 				color: rgb(var(--gray));
-				font-size: 0.85em;
+				font-size: 0.88em;
+				line-height: 1.6;
+			}
+			@media (max-width: 720px) {
+				.hero {
+					padding: 2em 1.4em;
+				}
+				.hero h1 {
+					font-size: 1.5em;
+				}
 			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<section class="intro">
-				<h1>일상에 필요한 정보를, 한 번에 정리해 드립니다</h1>
+			<section class="hero">
+				<h1>일상에 필요한 정보를,<br />한 번에 정리해 드립니다</h1>
 				<p>
-					보험 청구, 민원 서류 발급, 정부 지원 제도, 자동차 관리 — 검색해도 흩어져 있는 생활
-					정보를 절차 중심으로 알기 쉽게 정리하는 블로그입니다.
+					보험 청구부터 민원 서류 발급, 정부 지원 제도, 자동차 관리까지 — 검색해도 흩어져 있는
+					생활 정보를 절차 중심으로 알기 쉽게 정리합니다.
 				</p>
+				<div class="chips">
+					{categories.map((c) => <span class="chip">{c}</span>)}
+				</div>
 			</section>
 			<section>
-				<h2>최신 글</h2>
+				<div class="section-title">
+					<h2>최신 글</h2>
+					<a href="/blog/">전체 글 보기 →</a>
+				</div>
 				<ul class="post-list">
 					{
 						posts.map((post) => (
-							<li>
+							<li class="post-card">
 								<a href={`/blog/${post.id}/`}>
+									<div class="meta">
+										{post.data.tags?.[0] && <span class="tag-chip">{post.data.tags[0]}</span>}
+										<span class="date">
+											<FormattedDate date={post.data.pubDate} />
+										</span>
+									</div>
 									<h3 class="title">{post.data.title}</h3>
 									<p class="desc">{post.data.description}</p>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
 								</a>
 							</li>
 						))

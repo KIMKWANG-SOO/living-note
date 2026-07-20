@@ -4,32 +4,49 @@ const today = new Date();
 ---
 
 <footer>
+	<p class="brand">📒 {SITE_TITLE}</p>
 	<p class="footer-links">
-		<a href="/about/">소개</a> · <a href="/privacy/">개인정보처리방침</a>
+		<a href="/">홈</a> · <a href="/blog/">전체 글</a> · <a href="/about/">소개</a> ·
+		<a href="/privacy/">개인정보처리방침</a> · <a href="/rss.xml">RSS</a>
 	</p>
-	<p>&copy; {today.getFullYear()} {SITE_TITLE}. All rights reserved.</p>
 	<p class="disclaimer">
 		본 사이트의 글은 일반적인 정보 제공을 목적으로 하며, 제도·법령은 변경될 수 있으므로 중요한 결정
 		전에는 반드시 관련 기관의 공식 안내를 확인하시기 바랍니다.
 	</p>
+	<p class="copyright">&copy; {today.getFullYear()} {SITE_TITLE}. All rights reserved.</p>
 </footer>
 <style>
 	footer {
-		padding: 2em 1em 4em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
+		margin-top: 3em;
+		padding: 2.5em 1em 3em;
+		background: #0f172a;
+		color: #94a3b8;
 		text-align: center;
-		font-size: 0.85em;
+		font-size: 0.82em;
+		line-height: 1.7;
 	}
 	footer p {
 		margin: 0.4em 0;
 	}
+	.brand {
+		color: #f1f5f9;
+		font-weight: 700;
+		font-size: 1.1em;
+		margin-bottom: 0.8em;
+	}
 	.footer-links a {
-		color: rgb(var(--gray));
+		color: #cbd5e1;
+		text-decoration: none;
+	}
+	.footer-links a:hover {
+		color: #ffffff;
 	}
 	.disclaimer {
-		max-width: 640px;
-		margin: 0.6em auto 0;
-		line-height: 1.6;
+		max-width: 620px;
+		margin: 1em auto 0.8em;
+		color: #64748b;
+	}
+	.copyright {
+		color: #64748b;
 	}
 </style>
