@@ -1,0 +1,111 @@
+---
+interface Props {
+	title: string;
+}
+const { title } = Astro.props;
+const pageURL = new URL(Astro.url.pathname, Astro.site).href;
+---
+
+<div class="share-box">
+	<span class="share-label">이 글이 도움되셨다면 공유해 주세요</span>
+	<div class="share-buttons">
+		<button type="button" class="share-btn" id="native-share" data-url={pageURL} data-title={title} hidden>
+			📱 공유하기
+		</button>
+		<a
+			class="share-btn"
+			href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageURL)}`}
+			target="_blank"
+			rel="noopener"
+		>
+			페이스북
+		</a>
+		<a
+			class="share-btn"
+			href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(pageURL)}&text=${encodeURIComponent(title)}`}
+			target="_blank"
+			rel="noopener"
+		>
+			X (트위터)
+		</a>
+		<button type="button" class="share-btn" id="copy-link" data-url={pageURL}>
+			🔗 링크 복사
+		</button>
+	</div>
+</div>
+
+<style>
+	.share-box {
+		margin-top: 2.5em;
+		padding: 1.2em 1.5em;
+		background: var(--accent-soft);
+		border-radius: 10px;
+		text-align: center;
+	}
+	.share-label {
+		display: block;
+		font-size: 0.85em;
+		font-weight: 700;
+		color: var(--accent-dark);
+		margin-bottom: 0.8em;
+	}
+	.share-buttons {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.5em;
+	}
+	.share-btn {
+		display: inline-block;
+		padding: 0.45em 1em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 999px;
+		background: #ffffff;
+		color: rgb(var(--gray-dark));
+		font-size: 0.8em;
+		font-weight: 600;
+		font-family: inherit;
+		text-decoration: none;
+		cursor: pointer;
+		transition:
+			border-color 0.15s ease,
+			color 0.15s ease;
+	}
+	.share-btn:hover {
+		border-color: var(--accent);
+		color: var(--accent);
+	}
+</style>
+
+<script>
+	// 모바일 기본 공유 (카카오톡 등 설치된 앱으로 공유)
+	const nativeBtn = document.getElementById('native-share');
+	if (nativeBtn && navigator.share) {
+		nativeBtn.hidden = false;
+		nativeBtn.addEventListener('click', async () => {
+			try {
+				await navigator.share({
+					title: nativeBtn.dataset.title,
+					url: nativeBtn.dataset.url,
+				});
+			} catch {
+				/* 사용자가 공유 취소 */
+			}
+		});
+	}
+
+	// 링크 복사
+	const copyBtn = document.getElementById('copy-link');
+	if (copyBtn) {
+		copyBtn.addEventListener('click', async () => {
+			try {
+				await navigator.clipboard.writeText(copyBtn.dataset.url || '');
+				const original = copyBtn.textContent;
+				copyBtn.textContent = '✅ 복사됨!';
+				setTimeout(() => (copyBtn.textContent = original), 2000);
+			} catch {
+				prompt('아래 링크를 복사하세요:', copyBtn.dataset.url || '');
+			}
+		});
+	}
+</script>
