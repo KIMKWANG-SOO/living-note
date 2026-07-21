@@ -30,10 +30,10 @@ model: sonnet
 
 인스타그램 계정 @ks0814kim 연동 완료(2026-07-19). 게시 절차:
 
-1. 카드를 `D:\living-note\public\cards\<날짜>[-evening]\` 로 복사 → `npm run build` → git push (인스타 API는 공개 URL만 받으므로 배포가 선행되어야 함)
-2. `https://living-note.kr/cards/<날짜>[-evening]/card-01.png` 가 HTTP 200이 될 때까지 대기(최대 5분). 200이 안 되면 게시하지 않는다.
-3. 캡션을 `marketing\output\<날짜>[-evening]\caption.txt` 에 저장(인스타에 그대로 올라갈 본문만).
-4. 게시: `node D:\living-note\marketing\tools\post-instagram.mjs --publish --date <날짜>[-evening]`
+1. 카드를 `D:\living-note\public\cards\<날짜>\` 로 복사 → `npm run build` → git push (인스타 API는 공개 URL만 받으므로 배포가 선행되어야 함)
+2. `https://living-note.kr/cards/<날짜>/card-01.png` 가 HTTP 200이 될 때까지 대기(최대 5분). 200이 안 되면 게시하지 않는다.
+3. 캡션을 `marketing\output\<날짜>\caption.txt` 에 저장(인스타에 그대로 올라갈 본문만).
+4. 게시: `node D:\living-note\marketing\tools\post-instagram.mjs --publish --date <날짜>`
 5. 출력된 게시물 주소를 보고에 남긴다. 토큰 만료(code 190) 시 "토큰 갱신 필요"로 보고(재발급은 사장이 직접).
 
 # 제한 (중요)
