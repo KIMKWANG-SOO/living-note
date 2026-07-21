@@ -239,10 +239,6 @@ hr {
 		overflow-x: auto;
 		-webkit-overflow-scrolling: touch;
 	}
-	th,
-	td {
-		white-space: nowrap;
-	}
 }
 
 .sr-only {
