@@ -76,6 +76,12 @@ h5 {
 	margin-top: 1.6em;
 	color: var(--accent-dark);
 }
+/* 문단 맨 앞 볼드 리드인(FAQ의 "Q. ..." , 단계별 소제목 등)을 줄바꿈으로 분리
+   → 굵은 글씨 뒤 본문이 한 줄로 붙어 읽히던 문제 개선 */
+.prose p > strong:first-child {
+	display: block;
+	margin-bottom: 0.3em;
+}
 strong,
 b {
 	font-weight: 700;
