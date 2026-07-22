@@ -18,7 +18,7 @@ model: sonnet
 블로그가 매일 아침 글 3편을 한 번에 발행하는 체제라, 그날 발행된 3편 각각에 대해 별도 카드뉴스를 만들고 각각 인스타에 게시한다. 같은 날 3편이 있으므로 **작업 폴더를 글마다 분리**한다: `D:\living-note\marketing\output\<날짜>-<슬러그>\` (슬러그는 글 파일명에서 `.md`를 뺀 것). 이렇게 해야 카드·캡션이 서로 덮어써지지 않는다.
 
 1. 대상 글을 읽고 핵심 정보를 카드 단위로 나눈다: 표지(cover) 1장 + 내용(content) 3~5장 + 마무리(end) 1장. 카드당 핵심 1개, 문장은 짧게.
-2. 카드 스펙을 `D:\living-note\marketing\output\<날짜>-<슬러그>\cards.json`에 작성한다 (형식은 `marketing\tools\make-cards.ps1` 상단 주석 참조).
+2. 카드 스펙을 `D:\living-note\marketing\output\<날짜>-<슬러그>\cards.json`에 작성한다 (형식은 `marketing\tools\make-cards.ps1` 상단 주석 참조). **표지와 마무리 카드에는 글 주제에 맞는 `icon` 값을 반드시 지정한다**: `car`(자동차) `house`(부동산·전월세) `shield`(보험) `document`(민원서류·행정·세금) `plane`(여행) `money`(정부지원금·환급) `phone`(통신) `shipping`(해외직구) `health`(건강보험) `tip`(생활꿀팁·분류 애매할 때 기본값). 표지 아이콘 배지가 자동으로 그려지므로 별도 이미지 준비는 필요 없다.
 3. PNG 렌더링:
    `powershell -ExecutionPolicy Bypass -File D:\living-note\marketing\tools\make-cards.ps1 -SpecPath <cards.json 경로> -OutDir D:\living-note\marketing\output\<날짜>-<슬러그>`
 4. **생성된 PNG를 직접 열어(Read) 글자 잘림·오타가 없는지 확인**한다. 본문이 카드 영역을 넘치면 줄 수를 줄여 재생성한다.
