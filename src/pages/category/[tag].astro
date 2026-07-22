@@ -1,0 +1,127 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Header from '../../components/Header.astro';
+import { SITE_TITLE } from '../../consts';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+	const tags = [...new Set(posts.flatMap((p) => p.data.tags ?? []))];
+	return tags.map((tag) => ({
+		params: { tag },
+		props: {
+			posts: posts
+				.filter((p) => p.data.tags?.includes(tag))
+				.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()),
+		},
+	}));
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ko">
+	<head>
+		<BaseHead
+			title={`${tag} 관련 글 모음 | ${SITE_TITLE}`}
+			description={`생활정보노트의 ${tag} 카테고리 글 목록입니다. ${tag} 관련 절차·방법·정보를 한 곳에서 확인하세요.`}
+		/>
+		<style>
+			.page-head {
+				margin-bottom: 1.8em;
+			}
+			.page-head h1 {
+				font-size: 1.7em;
+				margin-bottom: 0.2em;
+			}
+			.page-head p {
+				color: rgb(var(--gray));
+				font-size: 0.9em;
+				margin: 0;
+			}
+			.post-list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 1em;
+			}
+			.post-card {
+				background: var(--card-bg);
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: var(--radius);
+				transition:
+					box-shadow 0.2s ease,
+					transform 0.2s ease,
+					border-color 0.2s ease;
+			}
+			.post-card:hover {
+				box-shadow: var(--box-shadow-hover);
+				transform: translateY(-2px);
+				border-color: var(--accent);
+			}
+			.post-card a {
+				display: block;
+				padding: 1.3em 1.5em;
+				text-decoration: none;
+			}
+			.post-card .date {
+				color: rgb(var(--gray));
+				font-size: 0.8em;
+				margin-bottom: 0.5em;
+				display: block;
+			}
+			.post-card .title {
+				margin: 0 0 0.4em 0;
+				font-size: 1.15em;
+				color: rgb(var(--black));
+				line-height: 1.4;
+			}
+			.post-card a:hover .title {
+				color: var(--accent);
+			}
+			.post-card .desc {
+				margin: 0;
+				color: rgb(var(--gray));
+				font-size: 0.88em;
+				line-height: 1.6;
+			}
+			.back-link {
+				display: inline-block;
+				margin-top: 2em;
+				font-size: 0.9em;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="page-head">
+				<h1><span class="tag-chip">{tag}</span> 관련 글</h1>
+				<p>총 {posts.length}개의 글 · 최신순</p>
+			</div>
+			<ul class="post-list">
+				{
+					posts.map((post) => (
+						<li class="post-card">
+							<a href={`/blog/${post.id}/`}>
+								<span class="date">
+									<FormattedDate date={post.data.pubDate} />
+								</span>
+								<h3 class="title">{post.data.title}</h3>
+								<p class="desc">{post.data.description}</p>
+							</a>
+						</li>
+					))
+				}
+			</ul>
+			<a class="back-link" href="/category/">← 전체 카테고리 보기</a>
+		</main>
+		<Footer />
+	</body>
+</html>

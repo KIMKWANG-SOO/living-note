@@ -1,0 +1,87 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import { SITE_TITLE } from '../../consts';
+
+const posts = await getCollection('blog');
+const counts = new Map<string, number>();
+for (const post of posts) {
+	for (const tag of post.data.tags ?? []) {
+		counts.set(tag, (counts.get(tag) ?? 0) + 1);
+	}
+}
+const categories = [...counts.entries()].sort((a, b) => b[1] - a[1]);
+---
+
+<!doctype html>
+<html lang="ko">
+	<head>
+		<BaseHead
+			title={`카테고리 전체보기 | ${SITE_TITLE}`}
+			description="생활정보노트의 전체 카테고리입니다. 보험, 민원서류, 정부지원금, 자동차, 부동산 등 주제별로 글을 모아 확인하세요."
+		/>
+		<style>
+			.page-head {
+				margin-bottom: 1.8em;
+			}
+			.page-head h1 {
+				font-size: 1.7em;
+			}
+			.cat-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+				gap: 1em;
+			}
+			.cat-card {
+				display: block;
+				padding: 1.4em 1em;
+				text-align: center;
+				background: var(--card-bg);
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: var(--radius);
+				text-decoration: none;
+				transition:
+					box-shadow 0.2s ease,
+					transform 0.2s ease,
+					border-color 0.2s ease;
+			}
+			.cat-card:hover {
+				box-shadow: var(--box-shadow-hover);
+				transform: translateY(-2px);
+				border-color: var(--accent);
+			}
+			.cat-card .name {
+				display: block;
+				font-weight: 700;
+				font-size: 1.1em;
+				color: rgb(var(--black));
+				margin-bottom: 0.3em;
+			}
+			.cat-card .count {
+				font-size: 0.8em;
+				color: rgb(var(--gray));
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="page-head">
+				<h1>카테고리 전체보기</h1>
+			</div>
+			<div class="cat-grid">
+				{
+					categories.map(([tag, count]) => (
+						<a class="cat-card" href={`/category/${encodeURIComponent(tag)}/`}>
+							<span class="name">{tag}</span>
+							<span class="count">{count}편</span>
+						</a>
+					))
+				}
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>

@@ -175,7 +175,13 @@ const related = postId
 				<div class="prose">
 					<div class="title">
 						<div class="meta-row">
-							{isArticle && tags?.[0] && <span class="tag-chip">{tags[0]}</span>}
+							{
+							isArticle && tags?.[0] && (
+								<a class="tag-chip" href={`/category/${encodeURIComponent(tags[0])}/`}>
+									{tags[0]}
+								</a>
+							)
+						}
 							<span class="date">
 								<FormattedDate date={pubDate} />
 							</span>
