@@ -60,4 +60,24 @@ import HeaderLink from './HeaderLink.astro';
 		font-weight: 700;
 		border-bottom-color: var(--accent);
 	}
+	@media (max-width: 400px) {
+		h2 {
+			font-size: 0.95em;
+		}
+		.internal-links {
+			display: flex;
+			overflow-x: auto;
+			scrollbar-width: none;
+			-ms-overflow-style: none;
+		}
+		.internal-links::-webkit-scrollbar {
+			display: none;
+		}
+		nav a {
+			padding: 0.7em 0.5em;
+			font-size: 0.85em;
+			white-space: nowrap;
+			flex-shrink: 0;
+		}
+	}
 </style>
