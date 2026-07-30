@@ -2,6 +2,7 @@
 title: '전세보증금 반환보증 가입방법 총정리 — HUG·HF·SGI 비교'
 description: '전세 계약 후 보증금을 못 돌려받을까 걱정된다면 전세보증금 반환보증 가입을 검토하세요. HUG·HF·SGI 3사 비교, 가입 조건, 신청 서류와 절차, 신청 기한까지 한 번에 정리했습니다.'
 pubDate: '2026-07-26'
+heroImage: './jeonse-guarantee-insurance-guide-hero.png'
 tags: ['부동산']
 faq:
   - question: '전세보증금 반환보증과 확정일자는 뭐가 다른가요?'

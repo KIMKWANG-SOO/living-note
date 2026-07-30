@@ -2,6 +2,7 @@
 title: '국제운전면허증 발급 방법과 준비물 총정리 — 온라인·공항·방문'
 description: '국제운전면허증을 온라인, 경찰서·운전면허시험장 방문, 공항에서 발급받는 방법과 준비물, 수수료, 유효기간까지 여행 전 확인해야 할 내용을 정리했습니다.'
 pubDate: '2026-07-23'
+heroImage: './international-driving-permit-guide-hero.png'
 tags: ['여행', '운전면허']
 faq:
   - question: '국제운전면허증만 있으면 해외에서 바로 운전할 수 있나요?'

@@ -2,6 +2,7 @@
 title: '자동차세 연납 신청 방법과 할인 총정리 (1·3·6·9월)'
 description: '자동차세를 미리 내고 할인받는 연납 제도의 신청 시기, 위택스·이택스 신청 방법, 유의사항을 정리했습니다. 할인율은 매년 바뀌므로 신청 전 공식 사이트 확인이 필요합니다.'
 pubDate: '2026-07-25'
+heroImage: './car-tax-prepayment-discount-guide-hero.png'
 tags: ['자동차', '세금']
 faq:
   - question: '자동차세 연납 할인율은 몇 %인가요?'

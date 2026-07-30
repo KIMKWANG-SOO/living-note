@@ -2,6 +2,7 @@
 title: '휴면예금·보험금 통합조회 및 환급 신청 방법 총정리'
 description: '이름도 잊고 있던 통장이나 보험금이 남아있는지 한 번에 조회하는 방법과, 확인 후 환급 신청하는 절차를 정리했습니다. 계좌정보통합관리서비스 이용법까지 확인하세요.'
 pubDate: '2026-07-22'
+heroImage: './dormant-account-insurance-refund-guide-hero.png'
 tags: ['금융']
 faq:
   - question: '휴면예금은 왜 생기나요?'

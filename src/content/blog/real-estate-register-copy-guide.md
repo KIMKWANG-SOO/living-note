@@ -2,6 +2,7 @@
 title: '등기부등본 인터넷 발급 방법 — 대법원 인터넷등기소 총정리'
 description: '부동산 등기부등본(등기사항증명서)을 대법원 인터넷등기소에서 열람·발급하는 방법을 정리했습니다. 필요한 정보, 열람용과 발급용의 차이, 절차를 단계별로 확인하세요.'
 pubDate: '2026-07-24'
+heroImage: './real-estate-register-copy-guide-hero.png'
 tags: ['민원서류', '부동산']
 faq:
   - question: '등기부등본과 등기사항증명서는 다른 서류인가요?'

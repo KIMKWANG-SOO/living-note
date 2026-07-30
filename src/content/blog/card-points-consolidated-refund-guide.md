@@ -2,6 +2,7 @@
 title: '카드포인트 통합조회 및 현금 계좌입금 방법 총정리'
 description: '여러 카드사에 흩어진 카드포인트를 한 번에 조회하고, 본인 계좌로 현금 입금 신청하는 방법을 정리했습니다. 포인트 소멸 전에 여신금융협회 통합조회 서비스로 확인해 보세요.'
 pubDate: '2026-07-23'
+heroImage: './card-points-consolidated-refund-guide-hero.png'
 tags: ['금융', '생활꿀팁']
 faq:
   - question: '카드포인트 통합조회는 연말에만 할 수 있나요?'

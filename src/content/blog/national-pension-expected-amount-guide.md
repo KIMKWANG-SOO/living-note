@@ -2,6 +2,7 @@
 title: '국민연금 예상수령액 조회 방법 총정리: 모의계산부터 상세조회까지'
 description: '국민연금 예상수령액이 궁금할 때 국민연금공단 홈페이지·앱에서 간단계산, 모의계산, 상세연금조회로 확인하는 방법과 준비물, 수급개시연령을 정리했습니다.'
 pubDate: '2026-07-23'
+heroImage: './national-pension-expected-amount-guide-hero.png'
 tags: ['국민연금', '노후준비', '정부지원금']
 faq:
   - question: '국민연금 예상수령액 조회는 로그인 없이도 할 수 있나요?'

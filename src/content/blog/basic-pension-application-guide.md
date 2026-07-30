@@ -2,6 +2,7 @@
 title: '기초연금 신청 자격과 신청 방법 총정리: 소득인정액 기준'
 description: '기초연금 신청 대상인지 헷갈리는 분들을 위해 소득인정액 기준, 신청 자격, 복지로·주민센터 신청 방법, 필요 서류, 지급 시기까지 한 번에 정리했습니다.'
 pubDate: '2026-07-28'
+heroImage: './basic-pension-application-guide-hero.png'
 tags: ['기초연금', '정부지원금', '노후준비']
 faq:
   - question: '기초연금은 국민연금을 받고 있어도 신청할 수 있나요?'

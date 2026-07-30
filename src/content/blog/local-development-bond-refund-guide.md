@@ -2,6 +2,7 @@
 title: '지역개발채권 환급금 조회 및 신청 방법 총정리'
 description: '자동차를 사거나 이전등록할 때 의무로 매입한 지역개발채권(도시철도채권), 즉시매도하지 않고 잊어버린 경우가 많습니다. 미상환 채권 조회와 환급 신청 방법을 정리했습니다.'
 pubDate: '2026-07-28'
+heroImage: './local-development-bond-refund-guide-hero.png'
 tags: ['자동차', '금융']
 faq:
   - question: '지역개발채권과 도시철도채권은 같은 건가요?'

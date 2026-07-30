@@ -2,6 +2,7 @@
 title: '건강보험 피부양자 자격 상실 신고 방법과 기한 총정리'
 description: '건강보험 피부양자 자격이 소득·재산 기준 초과로 상실되는 경우와 신고 방법, 지역가입자 전환 절차, 신고 기한을 정리했습니다. 미신고 시 불이익까지 확인하세요.'
 pubDate: '2026-07-22'
+heroImage: './health-insurance-dependent-disqualification-guide-hero.png'
 tags: ['건강보험']
 faq:
   - question: '피부양자 자격이 왜 갑자기 상실되나요?'

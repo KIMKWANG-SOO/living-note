@@ -2,6 +2,7 @@
 title: '실업급여(구직급여) 신청 방법과 조건 총정리'
 description: '실업급여(구직급여) 수급 자격, 신청 절차, 지급액 산정 방식과 신청 기한을 고용노동부·고용24 공식 안내를 기준으로 정리했습니다.'
 pubDate: '2026-07-27'
+heroImage: './unemployment-benefit-guide-hero.png'
 tags: ['정부지원금', '실업급여', '구직급여', '고용보험']
 faq:
   - question: '자발적으로 퇴사했는데도 실업급여를 받을 수 있나요?'

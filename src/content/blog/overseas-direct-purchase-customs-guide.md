@@ -2,6 +2,7 @@
 title: '해외직구 관세 면제 기준과 개인통관고유번호 발급 방법'
 description: '해외직구 시 관세가 면제되는 기준, 개인통관고유번호 발급 절차, 통관 지연·반품 시 대처법을 정리했습니다. 첫 해외직구 전에 확인하면 좋은 내용입니다.'
 pubDate: '2026-07-22'
+heroImage: './overseas-direct-purchase-customs-guide-hero.png'
 tags: ['해외직구']
 faq:
   - question: '같은 사이트에서 여러 번 나눠 사면 관세를 안 낼 수 있나요?'
