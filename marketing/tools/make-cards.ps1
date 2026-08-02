@@ -28,7 +28,28 @@ $dark = [System.Drawing.Color]::FromArgb(15, 18, 25)
 $gray = [System.Drawing.Color]::FromArgb(96, 115, 159)
 $white = [System.Drawing.Color]::White
 
-# 주제별 간단한 플랫 아이콘을 GDI+ 도형으로 그린다 (외부 이미지 자산 없이 벡터로 직접 그림)
+$IconAssetDir = Join-Path $PSScriptRoot '..\assets\icons'
+
+# 주제별 아이콘: marketing/assets/icons/<icon>.png (AI로 만든 일러스트, 흰 배경)가 있으면 그걸 배지에 합성하고,
+# 없으면 예전처럼 GDI+ 벡터 도형으로 대체 그린다.
+function Draw-IconAsset {
+    param([System.Drawing.Graphics]$g, [float]$cx, [float]$cy, [float]$size, [System.Drawing.Color]$color, [string]$icon)
+    $assetPath = Join-Path $IconAssetDir "$icon.png"
+    if (Test-Path $assetPath) {
+        $img = [System.Drawing.Image]::FromFile($assetPath)
+        $prevMode = $g.InterpolationMode
+        $g.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
+        $destSize = $size * 1.0
+        $g.DrawImage($img, ($cx - $destSize / 2), ($cy - $destSize / 2), $destSize, $destSize)
+        $g.InterpolationMode = $prevMode
+        $img.Dispose()
+    }
+    else {
+        Draw-Icon -g $g -cx $cx -cy $cy -size $size -color $color -icon $icon
+    }
+}
+
+# 주제별 간단한 플랫 아이콘을 GDI+ 도형으로 그린다 (아이콘 이미지 자산이 없을 때의 대체용)
 function Draw-Icon {
     param([System.Drawing.Graphics]$g, [float]$cx, [float]$cy, [float]$size, [System.Drawing.Color]$color, [string]$icon)
     $brush = New-Object System.Drawing.SolidBrush $color
@@ -147,11 +168,11 @@ foreach ($card in $spec.cards) {
         # 아이콘 배지: 흰 원 + 악센트색 아이콘
         $badgeR = 90
         $badgeCx = $W / 2; $badgeCy = 200
-        $badgeBrush = New-Object System.Drawing.SolidBrush ([System.Drawing.Color]::FromArgb(235, 255, 255, 255))
+        $badgeBrush = New-Object System.Drawing.SolidBrush $white
         $g.FillEllipse($badgeBrush, $badgeCx - $badgeR, $badgeCy - $badgeR, $badgeR * 2, $badgeR * 2)
         $badgeBrush.Dispose()
         $iconName = if ($card.icon) { [string]$card.icon } else { 'tip' }
-        Draw-Icon -g $g -cx $badgeCx -cy $badgeCy -size ($badgeR * 1.05) -color $accent -icon $iconName
+        Draw-IconAsset -g $g -cx $badgeCx -cy $badgeCy -size ($badgeR * 1.3) -color $accent -icon $iconName
 
         $headColor = $white; $bodyColor = [System.Drawing.Color]::FromArgb(220, 228, 255)
         $footColor = [System.Drawing.Color]::FromArgb(200, 210, 255)
@@ -174,7 +195,7 @@ foreach ($card in $spec.cards) {
             $g.FillEllipse($badgeBrush, $badgeCx - $badgeR, $badgeCy - $badgeR, $badgeR * 2, $badgeR * 2)
             $badgeBrush.Dispose()
             $iconName = if ($card.icon) { [string]$card.icon } else { 'tip' }
-            Draw-Icon -g $g -cx $badgeCx -cy $badgeCy -size ($badgeR * 1.05) -color $accent -icon $iconName
+            Draw-IconAsset -g $g -cx $badgeCx -cy $badgeCy -size ($badgeR * 1.3) -color $accent -icon $iconName
         }
 
         $headColor = $dark; $bodyColor = [System.Drawing.Color]::FromArgb(34, 41, 57)
