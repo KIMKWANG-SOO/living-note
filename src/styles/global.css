@@ -190,13 +190,33 @@ hr {
 }
 /* 쿠팡 파트너스 상품 추천 박스 */
 .product-box {
+	position: relative;
 	margin: 2em 0;
-	padding: 1.2em 1.5em;
+	padding: 1.2em 3.6em 1.2em 1.5em;
 	border: 1px solid rgb(var(--gray-light));
 	border-left: 4px solid var(--accent);
 	border-radius: 10px;
 	background: var(--card-bg);
 	box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+}
+.product-box::after {
+	content: '';
+	position: absolute;
+	top: 0.9em;
+	right: 0.9em;
+	width: 44px;
+	height: 44px;
+	background-image: url('/images/product-badge.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+@media (max-width: 480px) {
+	.product-box {
+		padding-right: 1.5em;
+	}
+	.product-box::after {
+		display: none;
+	}
 }
 .product-box .product-label {
 	font-size: 0.8em;
