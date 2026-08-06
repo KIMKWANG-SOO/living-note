@@ -28,6 +28,10 @@ export default defineConfig({
 	integrations: [
 		mdx(),
 		sitemap({
+			// 태그별 카테고리 페이지(/category/<tag>/)는 대부분 글 1~2편짜리 얇은 목록이라
+			// 구글에 "가치가 낮은 콘텐츠"로 대량 색인되는 걸 막기 위해 사이트맵에서 제외한다.
+			// (전체 카테고리 개요 페이지 /category/ 는 유지)
+			filter: (page) => !/\/category\/.+\//.test(new URL(page).pathname),
 			serialize(item) {
 				const match = item.url.match(/\/blog\/([^/]+)\/$/);
 				const lastmod = match && getBlogPostLastmod(match[1]);

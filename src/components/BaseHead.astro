@@ -13,11 +13,12 @@ interface Props {
 	type?: 'website' | 'article';
 	pubDate?: Date;
 	updatedDate?: Date;
+	noindex?: boolean;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = FallbackImage, type = 'website', pubDate, updatedDate } = Astro.props;
+const { title, description, image = FallbackImage, type = 'website', pubDate, updatedDate, noindex = false } = Astro.props;
 const imageURL = new URL(image.src, Astro.url);
 ---
 
@@ -44,6 +45,8 @@ const imageURL = new URL(image.src, Astro.url);
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
+
+{noindex && <meta name="robots" content="noindex,follow" />}
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
