@@ -3,7 +3,7 @@ title: '어카운트인포 휴면계좌 조회 방법, 숨은 예금 한 번에 
 description: '금융결제원이 운영하는 계좌정보통합관리서비스(어카운트인포)에서 내 명의의 휴면계좌·미사용 예금을 한 번에 조회하고, 해지하거나 잔고를 이전하는 방법을 단계별로 정리했습니다.'
 pubDate: '2026-08-08'
 heroImage: './dormant-account-finder-guide-hero.png'
-tags: ['통신·금융']
+tags: ['금융']
 faq:
   - question: '어카운트인포와 payinfo.or.kr은 다른 서비스인가요?'
     answer: '아니요, 같은 서비스입니다. 계좌정보통합관리서비스는 accountinfo.or.kr과 payinfo.or.kr 두 주소로 모두 접속되며, 둘 다 금융결제원이 운영하는 동일한 시스템입니다. 앱 이름도 "어카운트인포"로 통일되어 있습니다.'
