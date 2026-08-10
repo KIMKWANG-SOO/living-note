@@ -1,5 +1,7 @@
 // 구글 서치콘솔 Search Analytics 실측 데이터 조회
-// 사용법: node marketing/tools/search-console-check.mjs [--days 28]
+// 사용법: node marketing/tools/search-console-check.mjs [--days 28] [--page https://living-note.kr/blog/<슬러그>/]
+// --page 를 주면 전체 요약 대신 해당 페이지 하나에 대한 검색어별 노출·클릭·순위만 보여준다
+// (2026-08-10 SEO 점검에서 "페이지별 쿼리 필터가 불가하다"는 한계가 지적되어 추가함)
 import { readFileSync } from "node:fs";
 import { GoogleAuth } from "google-auth-library";
 
@@ -8,6 +10,8 @@ const SCOPES = ["https://www.googleapis.com/auth/webmasters.readonly"];
 
 const daysArg = process.argv.indexOf("--days");
 const days = daysArg !== -1 ? Number(process.argv[daysArg + 1]) : 28;
+const pageArg = process.argv.indexOf("--page");
+const pageFilter = pageArg !== -1 ? process.argv[pageArg + 1] : null;
 
 function fmtDate(d) {
   return d.toISOString().slice(0, 10);
@@ -40,6 +44,33 @@ async function main() {
   endDate.setDate(endDate.getDate() - 3); // 서치콘솔 데이터는 통상 2~3일 지연
   const startDate = new Date(endDate);
   startDate.setDate(startDate.getDate() - days);
+
+  if (pageFilter) {
+    const res = await client.request({
+      url: `https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(
+        target.siteUrl
+      )}/searchAnalytics/query`,
+      method: "POST",
+      data: {
+        startDate: fmtDate(startDate),
+        endDate: fmtDate(endDate),
+        dimensions: ["query"],
+        dimensionFilterGroups: [
+          { filters: [{ dimension: "page", operator: "equals", expression: pageFilter }] },
+        ],
+        rowLimit: 100,
+      },
+    });
+    const rows = res.data.rows ?? [];
+    console.log(`\n=== ${pageFilter} 검색어별 상세 (최근 ${days}일, ${fmtDate(startDate)} ~ ${fmtDate(endDate)}, ${rows.length}개) ===`);
+    if (rows.length === 0) console.log("데이터 없음");
+    for (const row of rows.sort((a, b) => b.impressions - a.impressions)) {
+      console.log(
+        `- "${row.keys[0]}" | 클릭 ${row.clicks} | 노출 ${row.impressions} | 평균순위 ${row.position.toFixed(2)}`
+      );
+    }
+    return;
+  }
 
   // 2. 전체 요약 (사이트 전체 클릭/노출/CTR/평균순위)
   const summaryRes = await client.request({
