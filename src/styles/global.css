@@ -28,6 +28,7 @@ body {
 	background: var(--bg);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
+	word-break: keep-all;
 	color: rgb(var(--gray-dark));
 	font-size: 19px;
 	line-height: 1.75;
