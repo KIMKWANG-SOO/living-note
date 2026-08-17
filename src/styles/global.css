@@ -83,6 +83,13 @@ h5 {
 	display: block;
 	margin-bottom: 0.3em;
 }
+/* FAQ가 "Q. ..." 질문과 답변을 별도 문단(빈 줄)으로 나눠 쓴 글의 경우,
+   질문 문단이 일반 문단과 같은 여백(1.6em)을 가져 질문-답변 묶음이
+   시각적으로 구분되지 않던 문제 개선. 질문만 담긴 문단의 아래쪽 여백을
+   좁혀 답변과 한 묶음으로 붙어 보이게 한다. */
+.prose p:has(> strong:first-child:only-child) {
+	margin-bottom: 0.5em;
+}
 strong,
 b {
 	font-weight: 700;
