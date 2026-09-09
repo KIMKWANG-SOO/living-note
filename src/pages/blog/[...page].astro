@@ -38,6 +38,48 @@ const pageTitle = page.currentPage === 1 ? `전체 글 | ${SITE_TITLE}` : `전�
 				font-size: 0.9em;
 				margin: 0;
 			}
+			.search-box {
+				display: flex;
+				gap: 0.5em;
+				margin-bottom: 1.2em;
+			}
+			.search-box input {
+				flex: 1;
+				min-width: 0;
+				padding: 0.75em 1em;
+				font-size: 0.95em;
+				font-family: inherit;
+				color: rgb(var(--black));
+				background: var(--card-bg);
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: var(--radius);
+			}
+			.search-box input:focus {
+				outline: none;
+				border-color: var(--accent);
+				box-shadow: 0 0 0 3px rgba(var(--gray), 0.12);
+			}
+			.search-box button {
+				padding: 0.75em 1em;
+				font-size: 0.9em;
+				font-family: inherit;
+				font-weight: 600;
+				color: rgb(var(--gray-dark));
+				background: var(--card-bg);
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: var(--radius);
+				cursor: pointer;
+				white-space: nowrap;
+			}
+			.search-box button:hover {
+				border-color: var(--accent);
+				color: var(--accent);
+			}
+			.search-status {
+				margin: -0.5em 0 1.2em;
+				color: rgb(var(--gray));
+				font-size: 0.88em;
+			}
 			.post-list {
 				list-style: none;
 				margin: 0;
@@ -123,7 +165,19 @@ const pageTitle = page.currentPage === 1 ? `전체 글 | ${SITE_TITLE}` : `전�
 				<h1>전체 글</h1>
 				<p>총 {page.total}개의 글 · 최신순</p>
 			</div>
-			<ul class="post-list">
+			<div class="search-box" data-search hidden>
+				<label class="sr-only" for="post-search">글 검색</label>
+				<input
+					type="search"
+					id="post-search"
+					placeholder="찾는 제도나 절차를 입력하세요 (예: 취득세, 여권 재발급)"
+					autocomplete="off"
+				/>
+				<button type="button" data-search-clear hidden>지우기</button>
+			</div>
+			<p class="search-status" data-search-status role="status" aria-live="polite" hidden></p>
+			<ul class="post-list" data-result-list hidden></ul>
+			<ul class="post-list" data-default-list>
 				{
 					page.data.map((post) => (
 						<li class="post-card">
@@ -154,5 +208,150 @@ const pageTitle = page.currentPage === 1 ? `전체 글 | ${SITE_TITLE}` : `전�
 			}
 		</main>
 		<Footer />
+		<script>
+			// 전체 글 목록 클라이언트 검색.
+			// 검색 결과를 별도 URL로 만들지 않는다 — 얇은 검색 결과 페이지가 색인되면
+			// 2026-08월에 태그 페이지로 겪었던 "가치가 낮은 콘텐츠" 문제가 재발한다.
+			const box = document.querySelector<HTMLElement>('[data-search]');
+			const input = document.querySelector<HTMLInputElement>('#post-search');
+			const clearBtn = document.querySelector<HTMLButtonElement>('[data-search-clear]');
+			const status = document.querySelector<HTMLElement>('[data-search-status]');
+			const defaultList = document.querySelector<HTMLElement>('[data-default-list]');
+			const resultList = document.querySelector<HTMLElement>('[data-result-list]');
+			const pagination = document.querySelector<HTMLElement>('.pagination');
+			const template = defaultList?.querySelector<HTMLLIElement>('li.post-card');
+
+			type Entry = { s: string; t: string; d: string; g: string[]; p: string; i: string };
+
+			if (box && input && clearBtn && status && defaultList && resultList && template) {
+				// JS가 살아있을 때만 검색창을 보여준다(비활성 입력창을 남기지 않기 위해).
+				box.hidden = false;
+
+				let index: Entry[] | null = null;
+				let loading: Promise<Entry[]> | null = null;
+
+				// 한국어는 조사가 붙으므로 단어 단위가 아니라 부분일치로 찾는다.
+				// 공백까지 지워 "취득세 신고"와 "취득세신고"가 서로 걸리게 한다.
+				const norm = (s: string) => s.toLowerCase().replace(/\s+/g, '');
+
+				function loadIndex() {
+					if (index) return Promise.resolve(index);
+					if (!loading) {
+						loading = fetch('/search-index.json')
+							.then((r) => {
+								if (!r.ok) throw new Error(String(r.status));
+								return r.json();
+							})
+							.then((data: Entry[]) => (index = data));
+					}
+					return loading;
+				}
+
+				function buildCard(item: Entry) {
+					// 서버가 그린 카드를 복제해 쓴다 — Astro 스코프 스타일 속성이 함께 복사된다.
+					const li = template!.cloneNode(true) as HTMLLIElement;
+					const link = li.querySelector('a');
+					if (link) link.setAttribute('href', `/blog/${item.s}/`);
+
+					const meta = li.querySelector('.meta');
+					let chip = li.querySelector('.tag-chip');
+					if (item.g && item.g.length > 0) {
+						if (!chip && meta) {
+							chip = document.createElement('span');
+							chip.className = 'tag-chip';
+							meta.insertBefore(chip, meta.firstChild);
+						}
+						if (chip) chip.textContent = item.g[0];
+					} else if (chip) {
+						chip.remove();
+					}
+
+					const time = li.querySelector('time');
+					if (time) {
+						time.setAttribute('datetime', item.i);
+						time.textContent = item.p;
+					}
+
+					const title = li.querySelector('.title');
+					if (title) title.textContent = item.t;
+					const desc = li.querySelector('.desc');
+					if (desc) desc.textContent = item.d;
+					return li;
+				}
+
+				function showDefault() {
+					resultList!.hidden = true;
+					resultList!.replaceChildren();
+					defaultList!.hidden = false;
+					if (pagination) pagination.hidden = false;
+					status!.hidden = true;
+					clearBtn!.hidden = true;
+				}
+
+				function showResults(query: string, matches: Entry[]) {
+					defaultList!.hidden = true;
+					if (pagination) pagination.hidden = true;
+					clearBtn!.hidden = false;
+					status!.hidden = false;
+
+					if (matches.length === 0) {
+						resultList!.hidden = true;
+						resultList!.replaceChildren();
+						status!.textContent = `"${query}"에 대한 결과가 없습니다. 다른 낱말로 찾아보세요.`;
+						return;
+					}
+					status!.textContent = `"${query}" 검색 결과 ${matches.length}개`;
+					const frag = document.createDocumentFragment();
+					for (const item of matches) frag.appendChild(buildCard(item));
+					resultList!.replaceChildren(frag);
+					resultList!.hidden = false;
+				}
+
+				async function run() {
+					const raw = input!.value.trim();
+					if (raw === '') {
+						showDefault();
+						return;
+					}
+
+					let data: Entry[];
+					try {
+						data = await loadIndex();
+					} catch {
+						loading = null;
+						status!.hidden = false;
+						status!.textContent = '검색 목록을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.';
+						return;
+					}
+
+					// 공백으로 나눈 낱말이 모두 들어 있는 글만 남긴다.
+					const terms = raw.split(/\s+/).map(norm).filter(Boolean);
+					const matches = data.filter((item) => {
+						const hay = norm(`${item.t} ${item.d} ${item.g.join(' ')}`);
+						return terms.every((term) => hay.includes(term));
+					});
+					showResults(raw, matches);
+				}
+
+				let timer: ReturnType<typeof setTimeout>;
+				input.addEventListener('input', () => {
+					clearTimeout(timer);
+					timer = setTimeout(run, 120);
+				});
+				input.addEventListener('keydown', (e) => {
+					if (e.key === 'Escape') {
+						input.value = '';
+						showDefault();
+					}
+				});
+				clearBtn.addEventListener('click', () => {
+					input.value = '';
+					showDefault();
+					input.focus();
+				});
+				// 검색어를 입력하기 전에 미리 받아둬 첫 타이핑이 끊기지 않게 한다.
+				input.addEventListener('focus', () => void loadIndex().catch(() => {}), { once: true });
+			}
+		</script>
 	</body>
 </html>
