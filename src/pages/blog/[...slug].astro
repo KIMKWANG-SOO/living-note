@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
+import { findCitedSites } from '../../data/official-sites';
 import BlogPost from '../../layouts/BlogPost.astro';
 
 export async function getStaticPaths() {
@@ -13,8 +14,11 @@ type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
 const { Content } = await render(post);
+
+// 글이 실제로 인용한 공식 사이트만 "바로 가기" 버튼으로 만든다.
+const citedSites = findCitedSites(post.body ?? '');
 ---
 
-<BlogPost {...post.data} postId={post.id}>
+<BlogPost {...post.data} postId={post.id} sites={citedSites}>
 	<Content />
 </BlogPost>

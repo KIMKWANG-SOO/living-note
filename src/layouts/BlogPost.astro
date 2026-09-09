@@ -8,14 +8,26 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import { SITE_TITLE } from '../consts';
+import type { OfficialSite } from '../data/official-sites';
 
 type Props = CollectionEntry<'blog'>['data'] & {
 	postId?: string;
 	isArticle?: boolean;
+	sites?: OfficialSite[];
 };
 
-const { title, description, pubDate, updatedDate, heroImage, faq, tags, postId, isArticle = true } =
-	Astro.props;
+const {
+	title,
+	description,
+	pubDate,
+	updatedDate,
+	heroImage,
+	faq,
+	tags,
+	postId,
+	isArticle = true,
+	sites = [],
+} = Astro.props;
 
 const pageURL = new URL(Astro.url.pathname, Astro.site).href;
 
@@ -168,6 +180,65 @@ const related = postId
 					font-size: 1.4em;
 				}
 			}
+			.site-links {
+				margin-top: 2.5em;
+				padding: 1.5em;
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: 12px;
+				background: rgba(var(--gray-light), 25%);
+			}
+			.site-links h2 {
+				margin: 0 0 0.2em;
+				font-size: 1.15em;
+			}
+			.site-links-note {
+				margin: 0 0 1em;
+				color: rgb(var(--gray));
+				font-size: 0.85em;
+			}
+			.site-links ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+				gap: 0.7em;
+			}
+			.site-links li {
+				margin: 0;
+			}
+			.site-links a {
+				display: block;
+				height: 100%;
+				padding: 0.85em 1em;
+				background: var(--card-bg);
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: var(--radius);
+				text-decoration: none;
+				transition:
+					border-color 0.15s ease,
+					box-shadow 0.15s ease;
+			}
+			.site-links a:hover {
+				border-color: var(--accent);
+				box-shadow: var(--box-shadow);
+			}
+			.site-links .site-name {
+				display: block;
+				font-weight: 700;
+				font-size: 0.95em;
+				color: rgb(var(--black));
+			}
+			.site-links a:hover .site-name {
+				color: var(--accent);
+			}
+			.site-links .site-note {
+				display: block;
+				margin-top: 0.25em;
+				color: rgb(var(--gray));
+				font-size: 0.82em;
+				line-height: 1.5;
+			}
 			.related {
 				margin-top: 3em;
 				padding: 1.5em;
@@ -226,6 +297,26 @@ const related = postId
 						}
 					</div>
 					<slot />
+					{
+						isArticle && sites.length > 0 && (
+							<aside class="site-links">
+								<h2>바로 가기</h2>
+								<p class="site-links-note">
+									이 글에서 안내한 공식 사이트입니다. 새 창으로 열립니다.
+								</p>
+								<ul>
+									{sites.map((site) => (
+										<li>
+											<a href={site.url} target="_blank" rel="noopener">
+												<span class="site-name">{site.name}</span>
+												<span class="site-note">{site.note}</span>
+											</a>
+										</li>
+									))}
+								</ul>
+							</aside>
+						)
+					}
 					{isArticle && <ShareButtons title={title} />}
 					{
 						related.length > 0 && (
