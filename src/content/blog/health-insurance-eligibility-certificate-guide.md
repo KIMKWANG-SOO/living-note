@@ -78,7 +78,7 @@ faq:
 - 프린터로 바로 출력하지 않는 경우 PDF 저장 또는 전자문서지갑 제출로 대체 가능
 - 대리 발급이 필요한 경우 위임장과 대리인 신분증 등 추가 서류가 필요할 수 있으므로 미리 공단에 확인
 
-전입신고나 확정일자처럼 임대차 관련 서류를 함께 준비해야 한다면 [전입신고와 확정일자 받는 방법 총정리](/blog/jeonseo-confirmation-date-guide/) 글도 참고하시면 도움이 됩니다.
+전입신고나 확정일자처럼 임대차 관련 서류를 함께 준비해야 한다면 [전입신고와 확정일자 받는 방법](/blog/jeonseo-confirmation-date-guide/) 글도 참고하시면 도움이 됩니다.
 
 <div class="product-box">
   <div class="product-label">🛒 함께 보면 좋은 준비물</div>

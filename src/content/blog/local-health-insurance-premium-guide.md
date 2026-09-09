@@ -81,7 +81,7 @@ faq:
 
 기한과 절차는 사안마다 달라질 수 있으므로, 이의신청을 계획하고 있다면 서류를 준비하기 전에 먼저 공단 고객센터나 지사에 절차를 확인하는 것을 권합니다.
 
-피부양자 자격을 잃어 지역가입자로 전환된 상황이라면 [건강보험 피부양자 자격 상실 신고 방법과 기한 총정리](/blog/health-insurance-dependent-disqualification-guide/) 글도 함께 참고하시면 도움이 됩니다.
+피부양자 자격을 잃어 지역가입자로 전환된 상황이라면 [건강보험 피부양자 자격 상실 신고 방법과 기한](/blog/health-insurance-dependent-disqualification-guide/) 글도 함께 참고하시면 도움이 됩니다.
 
 <div class="product-box">
   <div class="product-label">🛒 함께 보면 좋은 준비물</div>

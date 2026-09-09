@@ -73,7 +73,7 @@ faq:
 
 <div class="product-box">
   <div class="product-label">함께 보면 좋은 정보</div>
-  <a href="/blog/dormant-account-insurance-refund-guide/">휴면예금·보험금 통합조회 및 환급 신청 방법 총정리</a>
+  <a href="/blog/dormant-account-insurance-refund-guide/">휴면예금·보험금 통합조회 및 환급 신청 방법</a>
   <p class="product-note">여러 금융회사에 예금을 나눠두면 잊고 지내는 계좌가 생기기 쉽습니다. 분산 예치 후에는 주기적으로 통합조회 서비스로 잔액을 확인해두면 좋습니다.</p>
 </div>
 

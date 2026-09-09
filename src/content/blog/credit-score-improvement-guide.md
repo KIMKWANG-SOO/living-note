@@ -1,5 +1,5 @@
 ---
-title: '신용점수 올리는 방법 총정리, NICE·KCB 조회부터 관리까지'
+title: '신용점수 올리기, NICE·KCB 조회부터 관리 습관까지'
 description: '신용점수는 어디서 무료로 조회하는지, 어떤 기준으로 매겨지는지, 실질적으로 점수를 올리는 방법은 무엇인지 한 번에 정리했습니다. 카드를 많이 만들면 좋다는 흔한 오해도 함께 짚어봅니다.'
 pubDate: '2026-08-06'
 heroImage: './credit-score-improvement-guide-hero.png'

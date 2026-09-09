@@ -81,7 +81,7 @@ faq:
 - (대리 신청 시) 위임장, 대리인 신분증
 - 공단에서 받은 안내문(있는 경우)
 
-관련해서 피부양자 자격이나 지역가입자 보험료가 궁금하다면 [건강보험 피부양자 자격 상실 신고 방법과 기한 총정리](/blog/health-insurance-dependent-disqualification-guide/) 글도 참고하세요.
+관련해서 피부양자 자격이나 지역가입자 보험료가 궁금하다면 [건강보험 피부양자 자격 상실 신고 방법과 기한](/blog/health-insurance-dependent-disqualification-guide/) 글도 참고하세요.
 
 <div class="product-box">
   <div class="product-label">🛒 함께 보면 좋은 준비물</div>

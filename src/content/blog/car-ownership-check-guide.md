@@ -83,7 +83,7 @@ faq:
 
 신고 접수 창구, 필요 서류, 처리 기간은 지자체와 사안에 따라 달라질 수 있으므로 관할 등록관청과 경찰의 최신 안내를 따르는 것이 정확합니다.
 
-압류·저당이 걸린 중고차를 매매 전에 확인하는 절차가 궁금하다면 [중고차 압류·저당권 조회 방법 총정리](/blog/car-lien-check-guide/) 글을, 정상적인 명의이전 절차가 궁금하다면 [자동차 명의이전 방법 총정리](/blog/car-ownership-transfer-guide/) 글을 참고하세요.
+압류·저당이 걸린 중고차를 매매 전에 확인하는 절차가 궁금하다면 [중고차 압류·저당권 조회 방법](/blog/car-lien-check-guide/) 글을, 정상적인 명의이전 절차가 궁금하다면 [자동차 명의이전 방법](/blog/car-ownership-transfer-guide/) 글을 참고하세요.
 
 <div class="product-box">
   <div class="product-label">🛒 함께 보면 좋은 준비물</div>
