@@ -28,7 +28,11 @@ const articleLd = isArticle && {
 	...(updatedDate && { dateModified: updatedDate.toISOString() }),
 	mainEntityOfPage: pageURL,
 	...(heroImage && { image: new URL(heroImage.src, Astro.site).href }),
-	author: { '@type': 'Organization', name: '생활정보노트 편집팀' },
+	author: {
+		'@type': 'Person',
+		name: 'CoolPeace',
+		url: new URL('/about/', Astro.site).href,
+	},
 	publisher: {
 		'@type': 'Organization',
 		name: SITE_TITLE,
@@ -141,6 +145,15 @@ const related = postId
 				color: rgb(var(--gray));
 				font-size: 0.82em;
 			}
+			.author a {
+				color: rgb(var(--gray-dark));
+				text-decoration: none;
+				border-bottom: 1px solid rgba(var(--gray), 0.35);
+			}
+			.author a:hover {
+				color: var(--accent);
+				border-bottom-color: var(--accent);
+			}
 			.last-updated-on {
 				font-style: italic;
 				font-size: 0.85em;
@@ -197,7 +210,13 @@ const related = postId
 							</span>
 						</div>
 						<h1>{title}</h1>
-						{isArticle && <p class="author">생활정보노트 편집팀</p>}
+						{
+							isArticle && (
+								<p class="author">
+									글쓴이 <a href="/about/">CoolPeace</a>
+								</p>
+							)
+						}
 						{
 							updatedDate && (
 								<div class="last-updated-on">
