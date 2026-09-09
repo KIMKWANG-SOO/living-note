@@ -30,7 +30,7 @@ const articleLd = isArticle && {
 	...(heroImage && { image: new URL(heroImage.src, Astro.site).href }),
 	author: {
 		'@type': 'Person',
-		name: 'CoolPeace',
+		name: 'CoolPeace KS',
 		url: new URL('/about/', Astro.site).href,
 	},
 	publisher: {
@@ -213,7 +213,7 @@ const related = postId
 						{
 							isArticle && (
 								<p class="author">
-									글쓴이 <a href="/about/">CoolPeace</a>
+									글쓴이 <a href="/about/">CoolPeace KS</a>
 								</p>
 							)
 						}
