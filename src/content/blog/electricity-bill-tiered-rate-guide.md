@@ -1,5 +1,5 @@
 ---
-title: '전기요금 누진세 계산법과 절약 방법 총정리'
+title: '전기요금 누진구간, 어디서 확 뛰나 — 계산과 절약'
 description: '가정용 전기요금 누진구간 개념부터 가전제품별 절약 팁, 한전ON으로 요금 조회하는 방법, 여름철 완화 기준과 복지할인 제도까지 한 번에 정리했습니다.'
 pubDate: '2026-08-21'
 heroImage: './electricity-bill-tiered-rate-guide-hero.png'

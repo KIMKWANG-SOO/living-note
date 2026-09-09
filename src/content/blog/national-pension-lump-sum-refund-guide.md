@@ -1,5 +1,5 @@
 ---
-title: '국민연금 반환일시금 신청 자격과 지급액 계산 총정리'
+title: '국민연금 반환일시금 신청 자격과 지급액 계산'
 description: '가입기간 10년 미만이거나 국적 상실·해외 이주로 노령연금을 받지 못할 때, 그동안 낸 보험료를 돌려받는 국민연금 반환일시금의 신청 자격, 신청 방법, 지급액 계산 방식을 정리했습니다.'
 pubDate: '2026-08-14'
 heroImage: './national-pension-lump-sum-refund-guide-hero.png'

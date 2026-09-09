@@ -1,5 +1,5 @@
 ---
-title: '1세대 1주택 양도소득세 비과세 요건과 신청 총정리'
+title: '1세대 1주택 양도소득세 비과세, 요건부터 신청까지'
 description: '집 한 채를 팔 때 양도소득세를 안 낼 수 있는지 궁금한 1주택자를 위해 보유·거주기간 요건, 고가주택 기준, 신고 방법, 주의할 점을 순서대로 정리했습니다.'
 pubDate: '2026-08-14'
 heroImage: './capital-gains-tax-exemption-guide-hero.png'

@@ -1,5 +1,5 @@
 ---
-title: '실업급여 조기재취업수당 신청 방법과 조건 총정리'
+title: '실업급여 받다 취업하면? 조기재취업수당 신청 조건'
 description: '구직급여 수급자가 소정급여일수의 절반을 남기고 재취업했을 때 받는 조기재취업수당의 신청 조건, 절차, 청구 시기를 고용노동부·고용24 공식 안내를 기준으로 정리했습니다.'
 pubDate: '2026-08-13'
 heroImage: './early-reemployment-incentive-guide-hero.png'

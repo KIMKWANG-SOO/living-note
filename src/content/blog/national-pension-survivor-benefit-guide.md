@@ -1,5 +1,5 @@
 ---
-title: '국민연금 유족연금 수급조건·지급률·신청방법 총정리'
+title: '국민연금 유족연금 수급 조건과 지급률, 신청 절차'
 description: '국민연금 가입자나 수급자가 사망하면 배우자·자녀 등 유족이 받는 유족연금의 수급 순위, 수급 조건, 가입기간별 지급률, 신청 방법과 필요서류를 정리했습니다.'
 pubDate: '2026-08-08'
 heroImage: './national-pension-survivor-benefit-guide-hero.png'

@@ -1,5 +1,5 @@
 ---
-title: '육아기 근로시간 단축 급여 신청방법과 지급액 총정리'
+title: '육아기 근로시간 단축 급여 신청 절차와 지급액'
 description: '육아기 근로시간 단축 급여의 신청 자격, 단축 가능 시간, 급여 산정 방식과 육아휴직과의 차이를 고용보험 공식 안내를 기준으로 정리했습니다. 두 제도를 헷갈리기 쉬워 비교표로 함께 안내합니다.'
 pubDate: '2026-09-02'
 heroImage: './reduced-working-hours-childcare-benefit-guide-hero.png'

@@ -1,5 +1,5 @@
 ---
-title: '건강보험 산정특례 등록 방법과 대상, 적용기간 총정리'
+title: '건강보험 산정특례 등록 대상과 적용 기간, 신청 절차'
 description: '암·희귀질환·중증난치질환 등 산정특례 대상과 등록 신청 방법, 본인부담률이 낮아지는 원리, 적용 기간과 재등록 절차를 정리했습니다. 진단받았다면 꼭 확인해 보세요.'
 pubDate: '2026-09-06'
 heroImage: './health-insurance-special-case-guide-hero.png'

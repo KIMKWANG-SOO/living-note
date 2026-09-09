@@ -1,5 +1,5 @@
 ---
-title: '주택청약종합저축 가입 방법과 청약가점 계산법 총정리'
+title: '주택청약종합저축 가입 절차와 청약가점 계산법'
 description: '주택청약종합저축 가입 대상과 은행·앱 가입 방법, 월 납입금 설정 요령, 무주택기간·부양가족수·가입기간으로 계산하는 청약가점제, 1순위 조건까지 한 번에 정리했습니다.'
 pubDate: '2026-08-03'
 heroImage: './housing-subscription-account-guide-hero.png'

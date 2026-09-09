@@ -1,5 +1,5 @@
 ---
-title: '지역가입자 건강보험료 계산법과 절감 방법 총정리'
+title: '지역가입자 건강보험료는 어떻게 정해지고 줄일 수 있나'
 description: '지역가입자 건강보험료가 소득·재산·자동차 기준으로 어떻게 산정되는지, 갑자기 오르는 이유와 임의계속가입 등 합법적으로 줄이는 방법, 이의신청 절차까지 정리했습니다.'
 pubDate: '2026-08-12'
 heroImage: './local-health-insurance-premium-guide-hero.png'

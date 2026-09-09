@@ -1,5 +1,5 @@
 ---
-title: '상속세 신고·납부기한과 무신고·과소신고 가산세 총정리'
+title: '상속세 신고 기한 6개월, 놓치면 붙는 가산세'
 description: '상속세 신고기한은 원칙적으로 상속개시일이 속한 달 말일부터 6개월, 해외거주 상속인이 있으면 9개월입니다. 무신고·과소신고 가산세율과 분납·연부연납 제도까지 한 번에 정리했습니다.'
 pubDate: '2026-08-15'
 heroImage: './inheritance-tax-filing-deadline-guide-hero.png'

@@ -1,5 +1,5 @@
 ---
-title: '경형자동차 유류세 환급카드 신청 방법·한도 총정리'
+title: '경형자동차 유류세 환급카드 신청 절차와 연간 한도'
 description: '경형자동차(경차) 유류세 환급카드 발급 대상, 신청 방법, 사용 절차와 연간 환급 한도까지 정리했습니다. 정확한 한도·유효기간은 반드시 공식 사이트에서 확인하세요.'
 pubDate: '2026-08-16'
 heroImage: './light-car-fuel-tax-refund-card-guide-hero.png'

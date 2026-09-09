@@ -1,5 +1,5 @@
 ---
-title: '부동산 가계약금 반환·위약금 기준과 분쟁 대응법 총정리'
+title: '가계약금, 돌려받을 수 있을까 — 반환 기준과 분쟁 대응'
 description: '전월세·매매 계약 전 가계약금을 걸었다가 사정이 생겨 취소할 때 돌려받을 수 있는지, 계약금·중도금 지급 시점에 따른 위약금 기준과 내용증명·소액사건심판 대응 방법을 정리했습니다.'
 pubDate: '2026-08-28'
 heroImage: './real-estate-deposit-forfeiture-guide-hero.png'

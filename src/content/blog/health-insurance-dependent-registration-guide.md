@@ -1,5 +1,5 @@
 ---
-title: "건강보험 피부양자 등록 방법과 자격 조건 총정리"
+title: '건강보험 피부양자 등록, 소득·재산 조건과 신청 절차'
 description: "직장가입자가 배우자·부모·자녀 등 가족을 건강보험 피부양자로 새로 등록하는 절차를 정리했습니다. 대상 범위, 소득·재산 요건, 필요 서류, EDI·4대사회보험 정보연계센터 신청 방법까지 확인하세요."
 pubDate: 2026-09-08
 heroImage: './health-insurance-dependent-registration-guide-hero.png'

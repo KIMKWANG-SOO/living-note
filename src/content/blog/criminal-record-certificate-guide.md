@@ -1,5 +1,5 @@
 ---
-title: '범죄경력회보서 인터넷 발급 방법 — 경찰청·정부24 절차 총정리'
+title: '범죄경력회보서 인터넷 발급 절차와 경찰서 방문 안내'
 description: '취업, 비자 신청, 자격증 발급 등에 필요한 범죄경력회보서를 경찰청 crims.police.go.kr과 정부24에서 인터넷으로 발급받는 방법과 준비물, 용도 제한을 정리했습니다.'
 pubDate: '2026-08-10'
 heroImage: './criminal-record-certificate-guide-hero.png'

@@ -1,5 +1,5 @@
 ---
-title: '두루누리 사회보험료 지원사업 신청 방법과 지원 대상 총정리'
+title: '두루누리 사회보험료 지원, 누가 얼마나 받을 수 있나'
 description: '소규모 사업장 저임금 근로자와 사업주의 고용보험·국민연금 보험료 일부를 지원하는 두루누리 사회보험료 지원사업의 대상 요건, 지원 방식, 온라인 신청 절차와 유의사항을 정리했습니다.'
 pubDate: '2026-08-26'
 heroImage: './durunuri-social-insurance-support-guide-hero.png'

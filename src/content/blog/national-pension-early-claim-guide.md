@@ -1,5 +1,5 @@
 ---
-title: '국민연금 조기노령연금 신청 조건과 감액률 총정리'
+title: '국민연금 조기 수령, 앞당길수록 줄어드는 금액'
 description: '국민연금 조기노령연금은 정해진 수급개시연령보다 최대 5년 앞당겨 받는 제도입니다. 신청 자격, 1년당 감액률 구조, 유불리 비교, 신청 절차와 주의할 점을 정리했습니다.'
 pubDate: '2026-08-02'
 heroImage: './national-pension-early-claim-guide-hero.png'

@@ -1,5 +1,5 @@
 ---
-title: '국민연금 임의가입 신청 방법과 조건, 최저보험료 총정리'
+title: '소득이 없어도 국민연금 넣기 — 임의가입 조건과 보험료'
 description: '소득이 없는 전업주부·학생도 국민연금에 자발적으로 가입하는 임의가입 제도의 신청 자격, 지사 방문·EDI·전화 신청 방법, 최저보험료 기준과 임의계속가입·추납과의 차이를 정리했습니다.'
 pubDate: '2026-08-19'
 heroImage: './national-pension-voluntary-join-guide-hero.png'

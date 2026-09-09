@@ -1,5 +1,5 @@
 ---
-title: '프리랜서 기타소득세 원천징수 신고 방법 총정리'
+title: '프리랜서 기타소득세 원천징수와 사업소득 구분하기'
 description: '강연료·원고료·자문료 등 기타소득을 받았다면 3.3%와 8.8% 원천징수 차이, 필요경비 공제, 종합소득세 합산 여부, 지급명세서 확인 방법까지 홈택스 기준으로 정리했습니다.'
 pubDate: '2026-09-02'
 heroImage: './other-income-tax-withholding-guide-hero.png'

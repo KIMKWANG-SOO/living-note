@@ -1,5 +1,5 @@
 ---
-title: '유기동물 입양 지원금 신청 방법과 절차 총정리'
+title: '유기동물 입양하면 받는 지원금, 대상과 신청 절차'
 description: '지자체별 유기동물 입양 지원금 제도의 대략적인 구조와 입양 절차, 신청 서류, 중성화 수술비 등 함께 받을 수 있는 혜택, 신청 시 주의사항까지 정리했습니다.'
 pubDate: '2026-08-24'
 heroImage: './abandoned-pet-adoption-subsidy-guide-hero.png'

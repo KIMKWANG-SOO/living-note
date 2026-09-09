@@ -1,5 +1,5 @@
 ---
-title: 'IRP 개인형퇴직연금 해지 방법과 세금 총정리'
+title: 'IRP 개인형퇴직연금 중도해지와 물어야 할 세금'
 description: 'IRP를 중도해지하면 세액공제 받은 금액과 운용수익에 기타소득세 16.5%가 부과됩니다. 연금 수령과 일시금 수령의 세금 차이, 해지 절차, 2026년 바뀐 세율까지 정리했습니다.'
 pubDate: '2026-08-15'
 heroImage: './irp-withdrawal-tax-guide-hero.png'

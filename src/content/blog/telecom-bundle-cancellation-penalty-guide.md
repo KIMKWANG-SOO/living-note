@@ -1,5 +1,5 @@
 ---
-title: '인터넷·통신 결합상품 해지 위약금 정산 방법 총정리'
+title: '인터넷·통신 결합상품 해지 위약금은 어떻게 정산되나'
 description: '인터넷+휴대폰(또는 IPTV) 결합할인 상품을 중도 해지할 때 위약금이 어떻게 정산되는지, 일부 회선만 해지할 때의 처리 방식과 위약금을 줄이는 방법, SKT·KT·LG유플러스 공통 유의사항을 정리했습니다.'
 pubDate: '2026-08-11'
 heroImage: './telecom-bundle-cancellation-penalty-guide-hero.png'

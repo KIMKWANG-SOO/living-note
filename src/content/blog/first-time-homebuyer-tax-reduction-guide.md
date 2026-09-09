@@ -1,5 +1,5 @@
 ---
-title: '생애최초 주택 취득세 감면 조건과 신청방법 총정리'
+title: '생애최초 주택 취득세 감면, 조건과 신청 절차'
 description: '생애최초로 집을 사는 경우 취득세를 감면받을 수 있는 요건, 감면 한도, 신청 시기와 필요서류, 사후 추징 요건까지 무주택 실수요자 기준으로 정리했습니다.'
 pubDate: '2026-09-09'
 heroImage: './first-time-homebuyer-tax-reduction-guide-hero.png'

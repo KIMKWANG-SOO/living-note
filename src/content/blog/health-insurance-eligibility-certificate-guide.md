@@ -1,5 +1,5 @@
 ---
-title: '건강보험자격득실확인서 인터넷 발급 방법과 필요한 경우 총정리'
+title: '건강보험자격득실확인서 인터넷 발급과 쓰이는 곳'
 description: '건강보험자격득실확인서를 국민건강보험공단 홈페이지·앱에서 무료로 발급하는 방법과 대출·임대차 계약 등 제출이 필요한 상황을 정리했습니다. 준비물부터 절차까지 확인하세요.'
 pubDate: '2026-07-30'
 heroImage: './health-insurance-eligibility-certificate-guide-hero.png'

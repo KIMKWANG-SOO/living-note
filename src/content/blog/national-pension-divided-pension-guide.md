@@ -1,5 +1,5 @@
 ---
-title: '국민연금 분할연금 신청자격과 지급액 계산방법 총정리'
+title: '이혼 후 배우자 국민연금 나누기 — 분할연금 신청 자격'
 description: '이혼한 배우자의 국민연금을 나눠 받는 분할연금 제도를 정리했습니다. 혼인기간 5년 이상 등 신청자격, 청구기한, 지급액 산정방식, 신청 절차를 확인하세요.'
 pubDate: '2026-08-15'
 heroImage: './national-pension-divided-pension-guide-hero.png'

@@ -1,5 +1,5 @@
 ---
-title: "고향사랑기부제 세액공제 한도와 답례품 신청 총정리"
+title: '고향사랑기부제 세액공제 한도와 답례품 신청 안내'
 description: "고향사랑기부제로 10만원, 20만원을 기부하면 세액공제와 답례품을 각각 얼마나 받을 수 있는지 구간별로 정리하고, 고향사랑e음 신청 방법과 거주지 기부 제한 등 주의사항까지 공식 정보를 기준으로 안내합니다."
 pubDate: 2026-09-04
 heroImage: './hometown-love-donation-tax-credit-guide-hero.png'

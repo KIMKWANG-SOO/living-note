@@ -1,5 +1,5 @@
 ---
-title: '실업크레딧 신청 방법과 대상, 국민연금 가입기간 인정 총정리'
+title: '실직 기간도 국민연금 가입기간으로 — 실업크레딧 신청'
 description: '구직급여(실업급여)를 받는 동안 국민연금 보험료 일부를 정부가 지원해 가입기간으로 인정해주는 실업크레딧 제도의 신청 대상, 지원 비율, 신청 방법과 기한을 정리했습니다.'
 pubDate: '2026-08-28'
 heroImage: './employment-credit-national-pension-guide-hero.png'

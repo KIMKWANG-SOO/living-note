@@ -1,5 +1,5 @@
 ---
-title: '종합소득세 중간예납 대상자와 납부 기한 총정리'
+title: '종합소득세 중간예납, 나도 대상일까 — 기한과 납부'
 description: '매년 11월 사업소득자에게 통지되는 종합소득세 중간예납 제도의 대상자 기준, 고지서 납부와 추계액 신고의 차이, 홈택스·손택스 납부 방법과 가산세까지 정리했습니다.'
 pubDate: '2026-08-20'
 heroImage: './income-tax-halfyear-prepayment-guide-hero.png'

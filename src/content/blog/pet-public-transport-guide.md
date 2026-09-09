@@ -1,5 +1,5 @@
 ---
-title: '반려동물 동반 대중교통 이용 규정 버스·지하철·기차 총정리'
+title: '반려동물 동반 대중교통, 버스·지하철·기차 규정 비교'
 description: '강아지·고양이와 버스, 지하철, KTX·SRT 등 기차를 함께 이용할 때 이동장 규정과 탑승 가능 여부가 교통수단마다 어떻게 다른지 확인 포인트 중심으로 정리했습니다.'
 pubDate: '2026-08-30'
 heroImage: './pet-public-transport-guide-hero.png'

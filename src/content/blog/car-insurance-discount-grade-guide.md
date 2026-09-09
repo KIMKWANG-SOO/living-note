@@ -1,5 +1,5 @@
 ---
-title: '자동차보험 할인할증등급 조회 방법과 보험료 영향 총정리'
+title: '자동차보험 할인할증등급, 사고 한 번에 얼마나 오를까'
 description: '자동차보험 할인할증등급이 무엇이고 보험료에 어떻게 반영되는지, 손해보험협회 자동차보험 종합포털에서 내 등급을 조회하는 방법과 등급 관리 요령을 정리했습니다.'
 pubDate: '2026-08-26'
 heroImage: './car-insurance-discount-grade-guide-hero.png'

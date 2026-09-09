@@ -1,5 +1,5 @@
 ---
-title: '국민취업지원제도 구직촉진수당 신청방법·지급조건 총정리'
+title: '국민취업지원제도 구직촉진수당 지급 조건과 신청 절차'
 description: '국민취업지원제도 구직촉진수당의 지원 요건(I유형·II유형), 신청 절차, 지급액과 지급기간, 실업급여와의 차이를 고용노동부·고용24 안내를 기준으로 정리했습니다.'
 pubDate: '2026-08-27'
 heroImage: './national-employment-support-allowance-guide-hero.png'

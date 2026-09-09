@@ -1,5 +1,5 @@
 ---
-title: '병적증명서 인터넷 발급 방법과 필요 서류 총정리'
+title: '병적증명서 인터넷 발급 — 정부24와 병무청 이용 안내'
 description: '정부24에서 병적증명서를 인터넷으로 발급받는 방법을 준비물, 발급 절차, 무인민원발급기·주민센터 발급과의 차이, 수수료·처리 시간까지 정리했습니다.'
 pubDate: '2026-08-24'
 heroImage: './military-service-certificate-guide-hero.png'
