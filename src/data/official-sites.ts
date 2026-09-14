@@ -363,6 +363,18 @@ export const OFFICIAL_SITES: OfficialSite[] = [
 		match: ['cyber.kepco.co.kr', '한국전력'],
 		note: '전기요금 조회와 납부, 요금제 확인',
 	},
+	{
+		name: '서민금융진흥원',
+		url: 'https://kinfa.or.kr/',
+		match: ['kinfa.or.kr'],
+		note: '불법사금융예방대출·햇살론 등 정책서민금융 상품 신청',
+	},
+	{
+		name: '병무청',
+		url: 'https://www.mma.go.kr/',
+		match: ['mma.go.kr'],
+		note: '병역 관련 민원, 군복무 확인서 발급',
+	},
 ];
 
 /**
