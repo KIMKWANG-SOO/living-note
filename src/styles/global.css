@@ -180,6 +180,15 @@ blockquote {
 blockquote p {
 	margin: 0;
 }
+/* 본문(.prose) 안에서는 `.prose p { margin-bottom: 1.6em }`이 위 `blockquote p`보다
+   우선순위가 높아, 면책 인용구 박스 아래쪽에만 약 26px의 빈 공간이 생겨 위아래 여백이
+   비대칭(위 1em / 아래 약 2.6em)으로 보였다. 인용구 안 문단·목록의 마지막 요소 여백을 0으로 맞춘다. */
+.prose blockquote p {
+	margin: 0 0 0.6em;
+}
+.prose blockquote > :last-child {
+	margin-bottom: 0;
+}
 hr {
 	border: none;
 	border-top: 1px solid rgb(var(--gray-light));

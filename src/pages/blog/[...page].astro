@@ -16,6 +16,11 @@ export const getStaticPaths = (async ({ paginate }) => {
 
 const { page } = Astro.props;
 const pageTitle = page.currentPage === 1 ? `전체 글 | ${SITE_TITLE}` : `전체 글 (${page.currentPage}페이지) | ${SITE_TITLE}`;
+const listDescription =
+	'생활정보노트의 전체 글 목록입니다. 보험 청구, 민원 서류 발급, 자동차 관리 등 절차 중심 가이드를 최신순으로 확인하세요.';
+// 2페이지 이후는 title처럼 description도 페이지마다 달라야 중복 description이 생기지 않는다.
+const pageDescription =
+	page.currentPage === 1 ? listDescription : `${listDescription} (${page.currentPage}페이지)`;
 ---
 
 <!doctype html>
@@ -23,7 +28,7 @@ const pageTitle = page.currentPage === 1 ? `전체 글 | ${SITE_TITLE}` : `전�
 	<head>
 		<BaseHead
 			title={pageTitle}
-			description="생활정보노트의 전체 글 목록입니다. 보험 청구, 민원 서류 발급, 자동차 관리 등 절차 중심 가이드를 최신순으로 확인하세요."
+			description={pageDescription}
 		/>
 		<style>
 			.page-head {
