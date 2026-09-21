@@ -2,6 +2,7 @@
 title: '해외여행자보험, 무엇을 보장하고 어떻게 청구하나'
 description: '해외여행자보험 가입 방법과 보장 항목별 체크포인트, 카드사 무료 제공 여부, 사고 시 보험금 청구 절차까지 여행 전 확인해야 할 내용을 정리했습니다.'
 pubDate: '2026-07-20'
+heroImage: './overseas-travel-insurance-guide-hero.png'
 tags: ['여행']
 faq:
   - question: '카드에 딸린 무료 여행자보험만 믿어도 되나요?'

@@ -3,6 +3,7 @@ title: '자동차 정기검사 주기와 예약, 미검사 과태료'
 description: '자동차 정기검사·종합검사 주기와 한국교통안전공단 사이버검사소 예약 방법, 검사 기간을 놓쳤을 때 과태료 기준까지 한 번에 정리했습니다.'
 pubDate: '2026-07-19'
 updatedDate: '2026-08-06'
+heroImage: './car-inspection-complete-guide-hero.png'
 tags: ['자동차']
 faq:
   - question: '검사 예약 없이 그냥 가도 되나요?'

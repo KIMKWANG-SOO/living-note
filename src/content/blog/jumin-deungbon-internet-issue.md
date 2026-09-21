@@ -2,6 +2,7 @@
 title: '주민등록등본 인터넷 발급 방법 — 정부24에서 무료로 3분 만에 끝내기'
 description: '주민등록등본·초본을 정부24에서 무료로 인터넷 발급하는 방법을 단계별로 정리했습니다. 간편인증 로그인, 프린터 출력, 전자문서지갑 제출 방법까지 확인하세요.'
 pubDate: '2026-07-18'
+heroImage: './jumin-deungbon-internet-issue-hero.png'
 tags: ['민원서류']
 faq:
   - question: '가족(세대원)이 대신 발급할 수 있나요?'

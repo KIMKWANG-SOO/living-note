@@ -2,6 +2,7 @@
 title: '전입신고와 확정일자, 전세사기를 막는 첫 절차'
 description: '전월세 계약 후 전입신고와 확정일자를 받는 방법을 단계별로 정리했습니다. 정부24 인터넷 신청부터 주민센터 방문까지, 효력 발생 시점과 주의사항을 확인하세요.'
 pubDate: '2026-07-21'
+heroImage: './jeonseo-confirmation-date-guide-hero.png'
 tags: ['부동산']
 faq:
   - question: '전입신고와 확정일자는 꼭 같은 날 해야 하나요?'

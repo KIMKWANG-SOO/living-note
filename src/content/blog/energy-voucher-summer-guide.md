@@ -2,6 +2,7 @@
 title: '여름철 냉방비 지원 에너지바우처, 대상과 신청 기한'
 description: '에너지바우처(하절기) 지원 대상과 신청 방법, 복지로·주민센터 신청 절차, 사용 기한과 사용처까지 여름철 냉방비 지원금을 놓치지 않도록 정리했습니다.'
 pubDate: '2026-07-21'
+heroImage: './energy-voucher-summer-guide-hero.png'
 tags: ['정부지원금']
 faq:
   - question: '에너지바우처와 기초생활수급자 지원은 다른 건가요?'
