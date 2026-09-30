@@ -14,19 +14,19 @@ const pageURL = new URL(Astro.url.pathname, Astro.site).href;
 		</button>
 		<a
 			class="share-btn"
-			href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageURL)}`}
+			href={`https://share.naver.com/web/shareView?url=${encodeURIComponent(pageURL)}&title=${encodeURIComponent(title)}`}
 			target="_blank"
 			rel="noopener"
 		>
-			페이스북
+			네이버로 보내기
 		</a>
 		<a
 			class="share-btn"
-			href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(pageURL)}&text=${encodeURIComponent(title)}`}
+			href={`https://band.us/plugin/share?body=${encodeURIComponent(title)}&route=${encodeURIComponent(pageURL)}`}
 			target="_blank"
 			rel="noopener"
 		>
-			X (트위터)
+			밴드
 		</a>
 		<button type="button" class="share-btn" id="copy-link" data-url={pageURL}>
 			🔗 링크 복사
