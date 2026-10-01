@@ -220,6 +220,18 @@ export const OFFICIAL_SITES: OfficialSite[] = [
 		note: '주택연금·전세자금보증 신청',
 	},
 	{
+		name: '세움터',
+		url: 'https://www.eais.go.kr/',
+		match: ['eais.go.kr'],
+		note: '건축물대장 열람·발급, 건축행정 정보',
+	},
+	{
+		name: '주택도시보증공사(HUG)',
+		url: 'https://www.khug.or.kr/',
+		match: ['khug.or.kr'],
+		note: '전세보증금반환보증 가입·문의',
+	},
+	{
 		name: '층간소음 이웃사이센터',
 		url: 'https://floor.noiseinfo.or.kr/',
 		match: ['floor.noiseinfo.or.kr'],
