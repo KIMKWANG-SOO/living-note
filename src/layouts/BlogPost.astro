@@ -120,9 +120,14 @@ const related = postId
 				border-radius: var(--radius);
 				box-shadow: var(--box-shadow);
 			}
+			/* border-box: 안쪽 패딩까지 폭에 포함해 화면 밖으로 넘치지 않게 한다.
+			   (기존 content-box에선 패딩이 max-width 위에 더해져 721~876px 화면에서
+			   본문 카드가 최대 40px 넘쳐 가로 스크롤이 생기고, 모바일에선 좌우 여백이
+			   17px/8px로 비대칭이었다.) 데스크톱 본문 글줄 폭 760px은 그대로 유지. */
 			.prose {
-				width: 760px;
-				max-width: calc(100% - 2em);
+				box-sizing: border-box;
+				width: calc(760px + 5em + 2px);
+				max-width: 100%;
 				margin: auto;
 				padding: 2.2em 2.5em;
 				color: rgb(var(--gray-dark));
@@ -264,7 +269,7 @@ const related = postId
 		<main>
 			<article>
 				<div class="hero-image">
-					{heroImage && <Image width={900} height={900} src={heroImage} alt={title} />}
+					{heroImage && <Image width={900} height={900} src={heroImage} alt={title} loading="eager" fetchpriority="high" />}
 				</div>
 				<div class="prose">
 					<div class="title">
