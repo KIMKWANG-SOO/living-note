@@ -341,5 +341,29 @@ const related = postId
 			</article>
 		</main>
 		<Footer />
+		<script>
+			// 본문 표가 화면보다 넓을 때(주로 모바일) 옆으로 넘길 수 있다는 안내를 보여준다.
+			// 표를 .table-wrap으로 감싸고, 넘칠 때만 안내 문구와 오른쪽 흐림(.has-more)을 켠다.
+			document.querySelectorAll<HTMLTableElement>('.prose table').forEach((table) => {
+				const wrap = document.createElement('div');
+				wrap.className = 'table-wrap';
+				table.before(wrap);
+				wrap.append(table);
+				const hint = document.createElement('p');
+				hint.className = 'table-hint';
+				hint.textContent = '표를 옆으로 밀면 더 볼 수 있어요 →';
+				hint.hidden = true;
+				wrap.before(hint);
+				const update = () => {
+					const overflow = table.scrollWidth - table.clientWidth > 2;
+					hint.hidden = !overflow;
+					const atEnd = table.scrollLeft + table.clientWidth >= table.scrollWidth - 2;
+					wrap.classList.toggle('has-more', overflow && !atEnd);
+				};
+				table.addEventListener('scroll', update, { passive: true });
+				window.addEventListener('resize', update);
+				update();
+			});
+		</script>
 	</body>
 </html>

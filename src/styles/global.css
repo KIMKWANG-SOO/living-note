@@ -292,6 +292,34 @@ hr {
 	}
 }
 
+/* 표 가로 스크롤 안내: 모바일에서 표가 화면보다 넓으면 오른쪽 열이 잘리는데
+   넘길 수 있다는 표시가 없었다. BlogPost.astro의 스크립트가 본문 표를
+   .table-wrap으로 감싸고, 실제로 넘칠 때만 안내 문구와 오른쪽 흐림 효과를 켠다. */
+.table-wrap {
+	position: relative;
+	margin: 1.5em 0;
+}
+.table-wrap > table {
+	margin: 0;
+}
+.table-wrap.has-more::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 36px;
+	pointer-events: none;
+	border-radius: 0 var(--radius) var(--radius) 0;
+	background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.95));
+}
+.table-hint {
+	margin: 1.5em 0 -1.1em;
+	font-size: 0.8em;
+	color: rgb(var(--gray));
+	text-align: right;
+}
+
 .sr-only {
 	border: 0;
 	padding: 0;
