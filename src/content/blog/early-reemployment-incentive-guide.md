@@ -77,10 +77,6 @@ faq:
 
 구직급여 자체의 수급 자격과 신청 절차가 궁금하다면 [실업급여(구직급여) 신청 방법과 조건](/blog/unemployment-benefit-guide/) 글을, 회사의 이직확인서 처리가 늦어져 어려움을 겪고 있다면 [고용보험 이직확인서 발급방법과 처리 여부 조회](/blog/job-change-confirmation-guide/) 글도 함께 참고해 보세요.
 
-  <a href="https://link.coupang.com/a/fwByAuuK4a" target="_blank" rel="nofollow sponsored noopener">시스맥스 EL 3서류받침</a>
-  <p class="product-note">조기재취업수당 청구 시 필요한 근로계약서·재직증명서 등 증빙서류를 정리해두면 청구 단계에서 헤매지 않습니다.</p>
-</div>
-
 ## 자주 묻는 질문
 
 **재취업하자마자 바로 조기재취업수당을 청구할 수 있나요?**

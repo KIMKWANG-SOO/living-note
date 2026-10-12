@@ -83,10 +83,6 @@ faq:
 
 피부양자 자격을 잃어 지역가입자로 전환된 상황이라면 [건강보험 피부양자 자격 상실 신고 방법과 기한](/blog/health-insurance-dependent-disqualification-guide/) 글도 함께 참고하시면 도움이 됩니다.
 
-  <a href="https://link.coupang.com/a/fFu14gkwAm" target="_blank" rel="nofollow sponsored noopener">미쓰비시 제트스트림 볼펜 SXN-150 0.7mm 흑청적 각2자루</a>
-  <p class="product-note">이의신청서·임의계속가입 신청서 등 서류를 직접 작성할 때 쓰기 편한 필기구</p>
-</div>
-
 ## 자주 묻는 질문
 
 **Q. 지역가입자 보험료는 왜 직장가입자보다 계산이 복잡한가요?**
