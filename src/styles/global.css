@@ -282,6 +282,14 @@ hr {
 		overflow-x: auto;
 		-webkit-overflow-scrolling: touch;
 	}
+	/* 모바일 표 셀 좌우 여백 축소: 375px 폰에서 본문 카드 안쪽 폭은 약 264px인데,
+	   데스크톱 패딩(좌우 0.9em ≈ 14px씩)을 그대로 쓰면 3열 표(전체 표의 절반 이상)의
+	   칸당 글자 폭이 약 60px(한글 4자 안팎)뿐이라 셀이 길게 세로로 늘어졌다.
+	   좌우 0.6em으로 줄여 칸당 약 9px씩 글자 폭을 돌려준다. */
+	th,
+	td {
+		padding: 0.6em 0.6em;
+	}
 }
 
 .sr-only {
