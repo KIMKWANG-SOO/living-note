@@ -208,6 +208,12 @@ export const OFFICIAL_SITES: OfficialSite[] = [
 		note: '부동산·교통 제도 안내',
 	},
 	{
+		name: '마이홈포털',
+		url: 'https://www.myhome.go.kr/',
+		match: ['myhome.go.kr'],
+		note: '주거급여·공공임대 등 주거복지 안내',
+	},
+	{
 		name: '외교부 해외안전여행',
 		url: 'https://0404.go.kr/',
 		match: ['0404.go.kr'],
