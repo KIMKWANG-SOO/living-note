@@ -6,6 +6,8 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
 
+import remarkKoreanFixes from './src/plugins/remark-korean-fixes.mjs';
+
 const BLOG_DIR = new URL('./src/content/blog/', import.meta.url);
 
 // Read pubDate/updatedDate straight from a post's frontmatter so the sitemap
@@ -25,6 +27,10 @@ function getBlogPostLastmod(slug) {
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://living-note.kr',
+	markdown: {
+		// 한국어 본문의 자동링크 괄호 깨짐과 "**…)**조사" 굵게 깨짐을 바로잡는다.
+		remarkPlugins: [remarkKoreanFixes],
+	},
 	integrations: [
 		mdx(),
 		sitemap({
