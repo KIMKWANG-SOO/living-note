@@ -393,6 +393,24 @@ export const OFFICIAL_SITES: OfficialSite[] = [
 		match: ['mma.go.kr'],
 		note: '병역 관련 민원, 군복무 확인서 발급',
 	},
+	{
+		name: '미국 ESTA 공식 신청',
+		url: 'https://esta.cbp.dhs.gov/',
+		match: ['esta.cbp.dhs.gov'],
+		note: '미국 전자여행허가 신청·상태 조회',
+	},
+	{
+		name: '영국 ETA 안내(GOV.UK)',
+		url: 'https://www.gov.uk/eta',
+		match: ['gov.uk/eta'],
+		note: '영국 전자여행허가 대상·수수료·신청 안내',
+	},
+	{
+		name: '호주 내무부',
+		url: 'https://immi.homeaffairs.gov.au/',
+		match: ['immi.homeaffairs.gov.au'],
+		note: '호주 ETA(subclass 601) 등 입국 허가 안내',
+	},
 ];
 
 /**
