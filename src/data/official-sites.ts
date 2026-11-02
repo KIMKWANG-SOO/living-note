@@ -100,6 +100,18 @@ export const OFFICIAL_SITES: OfficialSite[] = [
 		note: '금융 민원·분쟁 조정 신청(1332)',
 	},
 	{
+		name: '서울아리수본부',
+		url: 'https://arisu.seoul.go.kr/',
+		match: ['arisu.seoul.go.kr'],
+		note: '서울 수도계량기 동파 신고·교체신청, 수도요금 민원',
+	},
+	{
+		name: '자치법규정보시스템',
+		url: 'https://www.elis.go.kr/',
+		match: ['elis.go.kr'],
+		note: '지자체 조례·규칙 원문 검색',
+	},
+	{
 		name: '계좌정보통합관리서비스',
 		url: 'https://payinfo.or.kr/',
 		match: ['payinfo.or.kr', 'accountinfo.or.kr'],
