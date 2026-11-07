@@ -423,6 +423,24 @@ export const OFFICIAL_SITES: OfficialSite[] = [
 		match: ['immi.homeaffairs.gov.au'],
 		note: '호주 ETA(subclass 601) 등 입국 허가 안내',
 	},
+	{
+		name: '한국가스공사',
+		url: 'https://www.kogas.or.kr/',
+		match: ['kogas.or.kr'],
+		note: '도시가스 요금 경감 안내와 대신신청 콜센터',
+	},
+	{
+		name: '한국지역난방공사',
+		url: 'https://www.kdhc.co.kr/',
+		match: ['kdhc.co.kr'],
+		note: '지역난방 에너지복지요금 안내와 신청',
+	},
+	{
+		name: '한전ON',
+		url: 'https://online.kepco.co.kr/',
+		match: ['online.kepco.co.kr'],
+		note: '전기요금 복지할인 신청과 요금 조회',
+	},
 ];
 
 /**
