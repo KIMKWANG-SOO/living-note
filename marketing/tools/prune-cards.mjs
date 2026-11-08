@@ -13,7 +13,7 @@ import { readFileSync, readdirSync, existsSync, statSync, rmSync } from 'node:fs
 import { join } from 'node:path';
 import { createHash } from 'node:crypto';
 
-const ROOT = 'D:/living-note';
+const ROOT = 'E:/living-note';
 const PUB = join(ROOT, 'public', 'cards');
 const SRC = join(ROOT, 'marketing', 'output');
 

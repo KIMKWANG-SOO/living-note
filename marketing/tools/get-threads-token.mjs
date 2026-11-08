@@ -4,7 +4,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
-const ROOT = 'D:/living-note';
+const ROOT = 'E:/living-note';
 const ENV_PATH = join(ROOT, '.env');
 
 const args = process.argv.slice(2);

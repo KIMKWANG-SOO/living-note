@@ -1,5 +1,5 @@
 // 카드뉴스 PNG들을 이어붙여 인스타 릴스용 세로 슬라이드쇼 영상(mp4, 1080x1920, 무음)을 만든다.
-// 사용법: node make-reel.mjs --dir D:\living-note\public\cards\<날짜>-<슬러그>
+// 사용법: node make-reel.mjs --dir E:\living-note\public\cards\<날짜>-<슬러그>
 // 출력: 같은 폴더에 reel.mp4 (오디오는 없음 — 인스타 앱에서 직접 트렌드 음원을 붙여 업로드하는 걸 전제로 함)
 import { execFileSync } from 'node:child_process';
 import { readdirSync, existsSync, mkdtempSync, writeFileSync, rmSync } from 'node:fs';

@@ -3,13 +3,13 @@
 //   node post-instagram.mjs --check                          # 토큰·계정 확인만 (게시 안 함)
 //   node post-instagram.mjs --publish --date 2026-07-19      # 해당 날짜 카드 캐러셀 게시
 // 전제:
-//   - D:\living-note\.env 에 INSTAGRAM_ACCESS_TOKEN 저장
+//   - E:\living-note\.env 에 INSTAGRAM_ACCESS_TOKEN 저장
 //   - 카드 이미지가 https://living-note.vercel.app/cards/<date>/card-XX.png 로 배포되어 있을 것
-//   - D:\living-note\marketing\output\<date>\caption.txt 에 캡션 저장되어 있을 것
+//   - E:\living-note\marketing\output\<date>\caption.txt 에 캡션 저장되어 있을 것
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
-const ROOT = 'D:/living-note';
+const ROOT = 'E:/living-note';
 const SITE = 'https://living-note.kr';
 const API_VERSION = 'v23.0';
 

@@ -4,7 +4,7 @@
 // 반복되는 걸 막기 위해, 실제로 어떤 게시물이 반응이 좋았는지 데이터로 확인한다.
 import { readFileSync } from "node:fs";
 
-const ROOT = "D:/living-note";
+const ROOT = "E:/living-note";
 const env = {};
 for (const line of readFileSync(`${ROOT}/.env`, "utf8").split(/\r?\n/)) {
 	const i = line.indexOf("=");

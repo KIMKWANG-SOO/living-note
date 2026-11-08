@@ -2,11 +2,11 @@
 // 사용법:
 //   node post-threads.mjs --check                 # 토큰·계정 확인만 (게시 안 함)
 //   node post-threads.mjs --publish --text "..."   # 텍스트 게시
-// 전제: D:\living-note\.env 에 THREADS_ACCESS_TOKEN 저장되어 있을 것
+// 전제: E:\living-note\.env 에 THREADS_ACCESS_TOKEN 저장되어 있을 것
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-const ROOT = 'D:/living-note';
+const ROOT = 'E:/living-note';
 const HOST = 'graph.threads.net';
 const API_VERSION = 'v1.0';
 

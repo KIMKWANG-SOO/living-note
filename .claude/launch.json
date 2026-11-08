@@ -5,7 +5,7 @@
 			"name": "living-note",
 			"runtimeExecutable": "npm",
 			"runtimeArgs": ["run", "dev"],
-			"cwd": "D:\\living-note",
+			"cwd": "E:\\living-note",
 			"port": 4321
 		}
 	]

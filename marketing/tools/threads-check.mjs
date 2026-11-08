@@ -1,10 +1,10 @@
 // Threads 계정 현황(팔로워 수 등) 조회 스크립트 (Threads API)
 // 사용법: node threads-check.mjs
-// 전제: D:\living-note\.env 에 THREADS_ACCESS_TOKEN 저장되어 있을 것
+// 전제: E:\living-note\.env 에 THREADS_ACCESS_TOKEN 저장되어 있을 것
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-const ROOT = 'D:/living-note';
+const ROOT = 'E:/living-note';
 const HOST = 'graph.threads.net';
 const API_VERSION = 'v1.0';
 
