@@ -15,6 +15,9 @@ export const getStaticPaths = (async ({ paginate }) => {
 }) satisfies GetStaticPaths;
 
 const { page } = Astro.props;
+// paginate()의 page.url.prev/next는 끝 슬래시가 없다("/blog/2"). vercel.json이 trailingSlash: true라
+// 그대로 두면 클릭·크롤링마다 308 리다이렉트를 한 번 더 거치므로 canonical과 같은 형태로 맞춘다.
+const withSlash = (url: string) => (url.endsWith('/') ? url : `${url}/`);
 const pageTitle = page.currentPage === 1 ? `전체 글 | ${SITE_TITLE}` : `전체 글 (${page.currentPage}페이지) | ${SITE_TITLE}`;
 const listDescription =
 	'생활정보노트의 전체 글 목록입니다. 보험 청구, 민원 서류 발급, 자동차 관리 등 절차 중심 가이드를 최신순으로 확인하세요.';
@@ -204,11 +207,11 @@ const pageDescription =
 			{
 				page.lastPage > 1 && (
 					<nav class="pagination" aria-label="페이지 이동">
-						{page.url.prev ? <a href={page.url.prev}>← 이전</a> : <span />}
+						{page.url.prev ? <a href={withSlash(page.url.prev)}>← 이전</a> : <span />}
 						<span class="page-status">
 							{page.currentPage} / {page.lastPage}
 						</span>
-						{page.url.next ? <a href={page.url.next}>다음 →</a> : <span />}
+						{page.url.next ? <a href={withSlash(page.url.next)}>다음 →</a> : <span />}
 					</nav>
 				)
 			}

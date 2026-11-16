@@ -37,7 +37,7 @@ const articleLd = isArticle && {
 	headline: title,
 	description: description,
 	datePublished: pubDate.toISOString(),
-	...(updatedDate && { dateModified: updatedDate.toISOString() }),
+	dateModified: (updatedDate ?? pubDate).toISOString(),
 	mainEntityOfPage: pageURL,
 	...(heroImage && { image: new URL(heroImage.src, Astro.site).href }),
 	author: {
