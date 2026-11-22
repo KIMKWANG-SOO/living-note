@@ -21,9 +21,10 @@ git이 없거나 푸시가 실패하면 보고서만 남기고 "커밋 못 함" 
 4. `https://living-note.kr/robots.txt`, `https://living-note.kr/sitemap-index.xml` 응답과 lastmod
 5. 인스타그램: `node marketing/tools/post-instagram.mjs --check` 의 팔로워·게시물 수
 6. 쓰레드: `node marketing/tools/threads-check.mjs` 의 팔로워 수
-7. 쿠팡: `marketing/coupang-links.md`의 행·카테고리 수, 날짜 만료("⚠️...까지") 행. 클릭·매출은 권한이 없으므로 "확인 못 함"
-8. `npm run build` 결과와 페이지 수, 태그 스키마 통과 여부
-9. 직전 보고 이후 빠진 날짜가 있으면 "점검 공백"으로 적는다. 원인을 모르면 "확인 못 함"이라고 쓴다.
+7. `npm run build` 결과와 페이지 수, 태그 스키마 통과 여부
+8. 직전 보고 이후 빠진 날짜가 있으면 "점검 공백"으로 적는다. 원인을 모르면 "확인 못 함"이라고 쓴다.
+
+쿠팡 파트너스는 2026-11-22 사장 요청으로 점검 항목에서 뺐다. 직전 보고에 쿠팡 행이나 섹션이 있어도 새 보고서에 옮기지 않는다.
 
 ### 판단 규칙
 
