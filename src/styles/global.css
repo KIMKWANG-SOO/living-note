@@ -25,6 +25,14 @@
 html {
 	scroll-padding-top: 80px;
 }
+/* hidden 속성이 실제로 숨기도록 보장: 브라우저 기본 `[hidden] { display: none }`은 작성자 CSS보다
+   약해서, display를 지정한 요소(.post-list·.search-box·.pagination의 flex, .share-btn의 inline-block)에
+   hidden을 붙여도 그대로 보였다. 그 결과 전체 글 목록에서 검색하면 결과 아래에 원래 글 목록과
+   페이지 이동이 계속 남았고, 글 하단에는 navigator.share가 없는 브라우저(데스크톱 Firefox 등)에서도
+   눌러도 반응 없는 "📱 공유하기" 버튼이 보였다. */
+[hidden] {
+	display: none !important;
+}
 body {
 	font-family:
 		'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
